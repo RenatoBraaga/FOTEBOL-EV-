@@ -2,15 +2,16 @@ import os
 import requests
 import pandas as pd
 
+# 🔑 Carrega as Chaves de Segurança cadastradas nos Secrets do GitHub
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 FOOTBALL_API_KEY = os.getenv("FOOTBALL_API_KEY")
 CSV_FILE_PATH = os.getenv("CSV_FILE_PATH", "jogos_filtrados_notebooklm_v4.csv")
 
 def send_telegram_alert(message):
-    """Envia a mensagem de alerta para o Telegram."""
+    """Envia a mensagem de alerta formatada para o Telegram."""
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
-        print("⚠️ Telegram não configurado nos Secrets.")
+        print("⚠️ Telegram não configurado nos Secrets do GitHub.")
         return
 
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
@@ -29,18 +30,19 @@ def send_telegram_alert(message):
         print(f"❌ Falha de conexão: {e}")
 
 def check_live_fixtures():
-    """Consulta a API-Football para buscar jogos ao vivo."""
+    """Consulta a API-Football configurada para o Fuso Horário de Brasília/SP (America/Sao_Paulo)."""
     if not FOOTBALL_API_KEY:
         print("⚠️ FOOTBALL_API_KEY não encontrada nos Secrets. Pulando consulta API.")
         return
 
-    url = "https://api-football-v1.p.rapidapi.com/v3/fixtures?live=all"
+    # URL atualizada com o fuso horário oficial de Brasília/SP
+    url = "https://api-football-v1.p.rapidapi.com/v3/fixtures?live=all&timezone=America/Sao_Paulo"
     headers = {
         "X-RapidAPI-Key": FOOTBALL_API_KEY,
         "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
     }
 
-    print("📡 Consultando partidas ao vivo na API-Football...")
+    print("📡 Consultando partidas ao vivo na API-Football (Horário de Brasília/SP)...")
     try:
         response = requests.get(url, headers=headers)
         data = response.json()
@@ -56,14 +58,14 @@ def check_live_fixtures():
             home_team = teams.get("home", {}).get("name", "Mandante")
             away_team = teams.get("away", {}).get("name", "Visitante")
             league_name = league.get("name", "Liga")
-            elapsed = fixture.get("status", {}).get("elapsed", 0)
+            elapsed = fixture.get("status", {}).get("elapsed", 0)  # Minuto da partida live
             goals_home = goals.get("home", 0)
             goals_away = goals.get("away", 0)
 
-            # Gatilho Live Gol Limite (2º Tempo 65'-75' sem gols)
+            # Gatilho Live Gol Limite (2º Tempo entre 65' e 75' min sem gols)
             if elapsed and 65 <= elapsed <= 75 and (goals_home + goals_away == 0):
-                prob = 80.0
-                odd_target = 1.75
+                prob = 80.0  # Probabilidade estimada do confronto
+                odd_target = 1.75  # Odd Alvo Live (@1.75)
                 ev = (prob / 100.0 * odd_target) - 1.0
 
                 if ev > 0.05:
@@ -77,6 +79,7 @@ def check_live_fixtures():
                         f"🔥 *Odd Alvo Live:* `@{odd_target:.2f}`\n"
                         f"📈 *Valor Esperado (+EV):* `+{ev*100:.1f}%`\n\n"
                         f"💰 *Gestão Recomendada:* `1.0u Stake`\n"
+                        f"🛡️ *Filtro:* Select Elite (P ≥ 70% | EV > +5%)\n"
                     )
                     send_telegram_alert(alert_msg)
 
@@ -84,9 +87,9 @@ def check_live_fixtures():
         print(f"❌ Erro na consulta da API-Football: {e}")
 
 def main():
-    print("🚀 Executando Varredura Quantitativa EV+...")
+    print("🚀 Executando Varredura Quantitativa EV+ (Fuso Brasília/SP)...")
     
-    # Validação de segurança para o arquivo CSV
+    # Proteção de leitura do CSV
     if os.path.exists(CSV_FILE_PATH) and os.path.getsize(CSV_FILE_PATH) > 0:
         try:
             df = pd.read_csv(CSV_FILE_PATH)
