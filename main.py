@@ -123,11 +123,12 @@ def main():
             continue
 
         jogos_na_base += 1
-        row = match_csv.iloc
+        # Converte a linha encontrada em um dicionário Python nativo
+        row_dict = match_csv.head(1).to_dict(orient="records").pop()
 
-        prob_raw = safe_float(row.get(col_prob, 0)) or 0.0
+        prob_raw = safe_float(row_dict.get(col_prob, 0)) or 0.0
         prob = (prob_raw / 100.0) if prob_raw > 1.0 else prob_raw
-        odd_house = safe_float(row.get(col_odd, None))
+        odd_house = safe_float(row_dict.get(col_odd, None))
 
         # Checagem de Odds Vazias
         if odd_house is None or odd_house <= 1.0:
@@ -165,4 +166,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
