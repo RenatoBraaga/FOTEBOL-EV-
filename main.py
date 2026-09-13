@@ -1,3 +1,4 @@
+```python
 import os
 import requests
 import pandas as pd
@@ -49,12 +50,24 @@ def safe_float(val):
     except (ValueError, TypeError):
         return None
 
-def main():
-    print("🚀 Iniciando Varredura Quantitativa EV+ com Diagnóstico Ampliado...")
+def e_liga_elite(league_name):
+    if not isinstance(league_name, str): return True
+    name_lower = league_name.lower()
+    exclusoes = [
+        "serie c", "série c", "serie d", "série d",
+        "u19", "u20", "u23", "sub-19", "sub-20", "sub-23", "junior", "juniors",
+        "women", "femenina", "feminin", "frauen", " 3. liga", " 4. liga", "tercera"
+    ]
+    for exc in exclusoes:
+        if exc in name_lower:
+            return False
+    return True
 
-    # 1. Carregar CSV
+def main():
+    print("🚀 Iniciando Varredura Quantitativa EV+ com Novas Estratégias Live...")
+
     if not os.path.exists(CSV_FILE):
-        print(f"❌ Erro Crítico: Nenhum arquivo CSV ({CSV_FILE}) foi encontrado no repositório.")
+        print(f"❌ Erro Crítico: Arquivo CSV ({CSV_FILE}) não encontrado no repositório.")
         return
 
     try:
@@ -65,12 +78,13 @@ def main():
         return
 
     # Mapeamento de Colunas
-    col_home = "Time_Casa" if "Time_Casa" in df_base.columns else "Home Team"
-    col_away = "Time_Fora" if "Time_Fora" in df_base.columns else "Away Team"
-    col_prob = "Over25_Pct" if "Over25_Pct" in df_base.columns else "Over25 Average"
-    col_odd  = "Odd_Over25" if "Odd_Over25" in df_base.columns else "Odds_Over25"
+    col_home     = "Time_Casa" if "Time_Casa" in df_base.columns else "Home Team"
+    col_away     = "Time_Fora" if "Time_Fora" in df_base.columns else "Away Team"
+    col_over25   = "Over25_Pct" if "Over25_Pct" in df_base.columns else "Over25 Average"
+    col_over15ht = "Over15_HT_Pct" if "Over15_HT_Pct" in df_base.columns else "Over15 FHG HT Average"
+    col_over15ft = "Over15_FT_Pct" if "Over15_FT_Pct" in df_base.columns else "Over15 Average"
+    col_btts     = "BTTS_Pct" if "BTTS_Pct" in df_base.columns else "BTTS Average"
 
-    # 2. Consultar API-Football
     if not API_KEY:
         print("❌ A chave FOOTBALL_API_KEY não foi configurada nos Secrets do GitHub.")
         return
@@ -99,7 +113,6 @@ def main():
         print("ℹ️ Nenhuma partida ao vivo no momento no mundo inteiro.")
         return
 
-    # 3. Cruzamento e Diagnóstico
     jogos_na_base = 0
     alertas_enviados = 0
 
@@ -107,8 +120,17 @@ def main():
     for fixture in partidas_live:
         home_api = fixture["teams"]["home"]["name"]
         away_api = fixture["teams"]["away"]["name"]
-        elapsed = fixture["fixture"]["status"]["elapsed"]
+        elapsed = fixture["fixture"]["status"]["elapsed"] or 0
         league_name = fixture["league"]["name"]
+        
+        # Placar da API ao vivo
+        goals_home = fixture["goals"]["home"] if fixture["goals"]["home"] is not None else 0
+        goals_away = fixture["goals"]["away"] if fixture["goals"]["away"] is not None else 0
+        total_gols = goals_home + goals_away
+
+        # Filtro de Elite (Exclusão de Séries C/D, Base, Feminino)
+        if not e_liga_elite(league_name):
+            continue
 
         home_clean = limpar_nome(home_api)
         away_clean = limpar_nome(away_api)
@@ -123,42 +145,70 @@ def main():
             continue
 
         jogos_na_base += 1
-        # Converte a linha encontrada em um dicionário Python nativo
         row_dict = match_csv.head(1).to_dict(orient="records").pop()
 
-        prob_raw = safe_float(row_dict.get(col_prob, 0)) or 0.0
-        prob = (prob_raw / 100.0) if prob_raw > 1.0 else prob_raw
-        odd_house = safe_float(row_dict.get(col_odd, None))
+        # Extração de Métricas Pré-Jogo (0-100%)
+        p_over25   = safe_float(row_dict.get(col_over25, 0)) or 0.0
+        p_over15ht = safe_float(row_dict.get(col_over15ht, 0)) or 0.0
+        p_over15ft = safe_float(row_dict.get(col_over15ft, 0)) or 0.0
+        p_btts     = safe_float(row_dict.get(col_btts, 0)) or 0.0
 
-        # Checagem de Odds Vazias
-        if odd_house is None or odd_house <= 1.0:
-            print(f"⚠️ [SEM ODDS NO CSV] {home_api} x {away_api} ({league_name}) | Prob: {prob*100:.0f}% - Sem Odd de Over 2.5 cadastrada.")
-            continue
+        if 0 < p_over25 <= 1.0: p_over25 *= 100
+        if 0 < p_over15ht <= 1.0: p_over15ht *= 100
+        if 0 < p_over15ft <= 1.0: p_over15ft *= 100
+        if 0 < p_btts <= 1.0: p_btts *= 100
 
-        fair_odd = 1.0 / prob if prob > 0 else 99.0
-        ev = (prob * odd_house) - 1.0
+        # --- AVALIAÇÃO DOS MÉTODOS E GATILHOS LIVE ---
+        alerta_gatilho = None
+        mercado_alerta = ""
+        prob_alerta = 0.0
+        stake_rec = "1.0u"
 
-        # Validação +EV (P >= 70% e EV > +5%)
-        if prob >= 0.70 and ev > 0.05:
-            stake_str = "1.5u" if ev > 0.15 else "1.0u"
-            print(f"🎯 [APROVADO +EV] {home_api} x {away_api} | Prob: {prob*100:.0f}% | Odd: @{odd_house:.2f} | EV: +{ev*100:.1f}%")
+        # MÉTODO 1: Over 0.5 HT (Gatilho: Over 1.5 HT >= 80%, 20'-30' min, Placar 0x0)
+        if p_over15ht >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
+            alerta_gatilho = "📌 METODO 1: GOL LIMITE HT (Over 0.5 HT)"
+            mercado_alerta = "Over 0.5 HT"
+            prob_alerta = p_over15ht
+            stake_rec = "1.5u" if p_over15ht >= 90 else "1.0u"
+
+        # MÉTODO 2: Over 1.5 FT (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar <= 1 gol)
+        elif p_over25 >= 80.0 and 15 <= elapsed <= 40 and total_gols <= 1:
+            alerta_gatilho = "📌 METODO 2: OVER 1.5 FT LIVE"
+            mercado_alerta = "Over 1.5 FT"
+            prob_alerta = p_over25
+            stake_rec = "1.5u" if p_over25 >= 90 else "1.0u"
+
+        # MÉTODO 3: Over Limite 70+ (Gatilho: Over 2.5 FT ou Over 1.5 FT >= 80%, Minuto >= 70, Placar Independente)
+        elif (p_over25 >= 80.0 or p_over15ft >= 80.0) and elapsed >= 70:
+            alerta_gatilho = "📌 METODO 3: OVER LIMITE 70+ (LATE GOAL)"
+            mercado_alerta = f"Over Limite FT (Placar Atual: {goals_home}x{goals_away})"
+            prob_alerta = max(p_over25, p_over15ft)
+            stake_rec = "1.5u" if prob_alerta >= 90 else "1.0u"
+
+        # MÉTODO 4: Ambas Marcam Live (Gatilho: BTTS >= 80%, 20'-30' min, Placar 0x0)
+        elif p_btts >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
+            alerta_gatilho = "📌 METODO 4: AMBAS MARCAM LIVE (BTTS YES)"
+            mercado_alerta = "Ambas Marcam (Sim)"
+            prob_alerta = p_btts
+            stake_rec = "1.5u" if p_btts >= 90 else "1.0u"
+
+        if alerta_gatilho:
+            fair_odd = 100.0 / prob_alerta if prob_alerta > 0 else 1.25
+            print(f"🎯 [APROVADO LIVE] {home_api} {goals_home}x{goals_away} {away_api} ({elapsed}') | {mercado_alerta} | Prob: {prob_alerta:.0f}%")
             
             mensagem = (
-                f"🎯 *ALERTA LIVE EV+ FUTBET*\n\n"
-                f"⚽ *{home_api} x {away_api}*\n"
+                f"🎯 *ALERTA LIVE EV+ FUTBET*\n"
+                f"{alerta_gatilho}\n\n"
+                f"⚽ *{home_api} {goals_home} x {goals_away} {away_api}*\n"
                 f"🏆 *Liga:* {league_name}\n"
                 f"⏱️ *Tempo:* {elapsed}' min\n\n"
-                f"📌 *Mercado:* Over 2.5 Gols\n"
-                f"📈 *Probabilidade Real (P):* {prob*100:.0f}%\n"
-                f"📐 *Odd Justa:* @{fair_odd:.2f}\n"
-                f"🏠 *Odd da Casa:* @{odd_house:.2f}\n"
-                f"💎 *EV+ Estimado:* +{ev*100:.1f}%\n"
-                f"🛡️ *Stake Recomendada:* {stake_str}\n"
+                f"📌 *Mercado:* {mercado_alerta}\n"
+                f"📈 *Probabilidade Base:* {prob_alerta:.0f}%\n"
+                f"📐 *Odd Justa Estimada:* @{fair_odd:.2f}\n"
+                f"🛡️ *Stake Recomendada:* {stake_rec}\n"
             )
             enviar_telegram(mensagem)
             alertas_enviados += 1
-        else:
-            print(f"🛑 [FILTRADO] {home_api} x {away_api} | Prob: {prob*100:.0f}% (Mín 70%) | EV: {ev*100:.1f}% (Mín +5%)")
 
     print("--------------------------------------------------")
     print(f"📊 Resumo: {jogos_na_base} jogos ao vivo pertenciam à sua planilha.")
@@ -166,3 +216,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
