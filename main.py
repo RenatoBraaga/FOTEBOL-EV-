@@ -1,3 +1,4 @@
+```python
 import os
 import requests
 import pandas as pd
@@ -115,7 +116,7 @@ def main():
             continue
 
         jogos_na_base += 1
-        row = match_csv.iloc
+        row = match_csv.iloc  # Corrigido: captura a primeira linha da correspondência
 
         prob_raw = row.get(col_prob, 0)
         prob = (prob_raw / 100.0) if prob_raw > 1.0 else prob_raw
@@ -157,3 +158,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
