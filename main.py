@@ -41,6 +41,14 @@ def limpar_nome(nome):
         nome = nome.replace(termo, "")
     return nome.strip()
 
+def safe_float(val):
+    try:
+        if pd.isna(val) or val == "" or val is None:
+            return None
+        return float(val)
+    except (ValueError, TypeError):
+        return None
+
 def main():
     print("🚀 Iniciando Varredura Quantitativa EV+ com Diagnóstico Ampliado...")
 
@@ -115,14 +123,14 @@ def main():
             continue
 
         jogos_na_base += 1
-        row = match_csv.iloc  # CORRIGIDO: iloc extrai a primeira linha encontrada como Series
+        row = match_csv.iloc  # Corrigido: captura a primeira linha como Series
 
-        prob_raw = row.get(col_prob, 0)
+        prob_raw = safe_float(row.get(col_prob, 0)) or 0.0
         prob = (prob_raw / 100.0) if prob_raw > 1.0 else prob_raw
-        odd_house = row.get(col_odd, None)
+        odd_house = safe_float(row.get(col_odd, None))
 
         # Checagem de Odds Vazias
-        if pd.isna(odd_house) or odd_house <= 1.0:
+        if odd_house is None or odd_house <= 1.0:
             print(f"⚠️ [SEM ODDS NO CSV] {home_api} x {away_api} ({league_name}) | Prob: {prob*100:.0f}% - Sem Odd de Over 2.5 cadastrada.")
             continue
 
