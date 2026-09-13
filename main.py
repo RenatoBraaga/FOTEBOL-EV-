@@ -123,7 +123,7 @@ def main():
             continue
 
         jogos_na_base += 1
-        row = match_csv.iloc  # Corrigido: captura a primeira linha como Series
+        row = match_csv.iloc
 
         prob_raw = safe_float(row.get(col_prob, 0)) or 0.0
         prob = (prob_raw / 100.0) if prob_raw > 1.0 else prob_raw
