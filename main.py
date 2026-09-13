@@ -204,7 +204,8 @@ def main():
                 f"📌 *Mercado:* {mercado_alerta}\n"
                 f"📈 *Probabilidade Base:* {prob_alerta:.0f}%\n"
                 f"📐 *Odd Justa Estimada:* @{fair_odd:.2f}\n"
-                f"🛡️ *Stake Recomendada:* {stake_rec}\n"
+                f"🛡️ *Stake Recomendada:* {stake_rec}\n\n"
+                f"🔗 https://www.bet365.bet.br/#/AX/\n"
             )
             enviar_telegram(mensagem)
             alertas_enviados += 1
