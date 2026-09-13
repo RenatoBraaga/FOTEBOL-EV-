@@ -3,7 +3,6 @@ name: Executar Robô EV+ FutBET
 on:
   workflow_dispatch:
   schedule:
-    # Dispara exatamente aos 20 e 50 minutos de cada hora (Ex: 16:20, 16:50, 17:20...)
     - cron: '20,50 * * * *'
 
 permissions:
