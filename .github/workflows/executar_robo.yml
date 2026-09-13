@@ -3,7 +3,10 @@ name: Executar Robô EV+ FutBET
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *'  # Roda a cada 30 minutos para não perder os gatilhos live
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
 
 jobs:
   run-robot:
