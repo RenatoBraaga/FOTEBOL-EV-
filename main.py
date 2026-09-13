@@ -88,8 +88,8 @@ def e_liga_elite(league_name):
 
 def obter_estatisticas_live(fixture_id, headers):
     """
-    Consulta estatísticas ao vivo (chutes no gol, cartões vermelhos, etc.) 
-    Apenas para jogos pré-qualificados, economizando requisições.
+    Consulta estatísticas ao vivo (chutes no gol, escanteios, cartões, etc.) 
+    Apenas para jogos pré-qualificados nos gatilhos, economizando requisições.
     """
     url_stats = f"https://v3.football.api-sports.io/fixtures/statistics?fixture={fixture_id}"
     stats_summary = {
@@ -98,7 +98,9 @@ def obter_estatisticas_live(fixture_id, headers):
         "home_red_cards": 0,
         "away_red_cards": 0,
         "home_possession": "0%",
-        "away_possession": "0%"
+        "away_possession": "0%",
+        "home_corners": 0,
+        "away_corners": 0
     }
     try:
         res = requests.get(url_stats, headers=headers, timeout=10)
@@ -112,6 +114,7 @@ def obter_estatisticas_live(fixture_id, headers):
                     if st_type == "Shots on Goal": stats_summary["home_shots_on_target"] = val
                     elif st_type == "Red Cards": stats_summary["home_red_cards"] = val
                     elif st_type == "Ball Possession": stats_summary["home_possession"] = str(val)
+                    elif st_type == "Corner Kicks": stats_summary["home_corners"] = val
 
                 # Time Fora
                 for item in data[1].get("statistics", []):
@@ -120,6 +123,7 @@ def obter_estatisticas_live(fixture_id, headers):
                     if st_type == "Shots on Goal": stats_summary["away_shots_on_target"] = val
                     elif st_type == "Red Cards": stats_summary["away_red_cards"] = val
                     elif st_type == "Ball Possession": stats_summary["away_possession"] = str(val)
+                    elif st_type == "Corner Kicks": stats_summary["away_corners"] = val
     except Exception as e:
         print(f"⚠️ Falha ao buscar estatísticas do jogo {fixture_id}: {e}")
     
@@ -127,7 +131,7 @@ def obter_estatisticas_live(fixture_id, headers):
 
 
 def main():
-    print("🚀 Iniciando Varredura Quantitativa EV+ com Novas Estratégias Live...")
+    print("🚀 Iniciando Varredura Quantitativa EV+ com Estratégias Live FutBET...")
 
     if not os.path.exists(CSV_FILE):
         print(f"❌ Erro Crítico: Arquivo CSV ({CSV_FILE}) não encontrado no repositório.")
@@ -142,14 +146,15 @@ def main():
 
     historico_alertas = carregar_historico_alertas()
 
-    # Mapeamento de Colunas
+    # Mapeamento de Colunas da Planilha
     col_home      = "Time_Casa" if "Time_Casa" in df_base.columns else "Home Team"
     col_away      = "Time_Fora" if "Time_Fora" in df_base.columns else "Away Team"
     col_over25    = "Over25_Pct" if "Over25_Pct" in df_base.columns else "Over25 Average"
     col_over15ht  = "Over15_HT_Pct" if "Over15_HT_Pct" in df_base.columns else "Over15 FHG HT Average"
     col_over15ft  = "Over15_FT_Pct" if "Over15_FT_Pct" in df_base.columns else "Over15 Average"
     col_btts      = "BTTS_Pct" if "BTTS_Pct" in df_base.columns else "BTTS Average"
-    col_corners   = "Average Over 8.5 Corners" if "Average Over 8.5 Corners" in df_base.columns else "Average Over 9.5 Corners"
+    col_corners85 = "Average Over 8.5 Corners" if "Average Over 8.5 Corners" in df_base.columns else "Over85_Corners_Pct"
+    col_corners95 = "Average Over 9.5 Corners" if "Average Over 9.5 Corners" in df_base.columns else "Over95_Corners_Pct"
 
     if not API_KEY:
         print("❌ A chave FOOTBALL_API_KEY não foi configurada nos Secrets do GitHub.")
@@ -218,16 +223,22 @@ def main():
 
         jogos_na_base += 1
 
-        # Extração de Métricas Pré-Jogo (0-100%)
-        p_over25   = safe_float(row_dict.get(col_over25, 0)) or 0.0
-        p_over15ht = safe_float(row_dict.get(col_over15ht, 0)) or 0.0
-        p_over15ft = safe_float(row_dict.get(col_over15ft, 0)) or 0.0
-        p_btts     = safe_float(row_dict.get(col_btts, 0)) or 0.0
+        # Extração de Métricas Pré-Jogo (Normalizadas de 0 a 100%)
+        p_over25    = safe_float(row_dict.get(col_over25, 0)) or 0.0
+        p_over15ht  = safe_float(row_dict.get(col_over15ht, 0)) or 0.0
+        p_over15ft  = safe_float(row_dict.get(col_over15ft, 0)) or 0.0
+        p_btts      = safe_float(row_dict.get(col_btts, 0)) or 0.0
+        p_corners85 = safe_float(row_dict.get(col_corners85, 0)) or 0.0
+        p_corners95 = safe_float(row_dict.get(col_corners95, 0)) or 0.0
 
         if 0 < p_over25 <= 1.0: p_over25 *= 100
         if 0 < p_over15ht <= 1.0: p_over15ht *= 100
         if 0 < p_over15ft <= 1.0: p_over15ft *= 100
         if 0 < p_btts <= 1.0: p_btts *= 100
+        if 0 < p_corners85 <= 1.0: p_corners85 *= 100
+        if 0 < p_corners95 <= 1.0: p_corners95 *= 100
+
+        p_corners = max(p_corners85, p_corners95)
 
         # --- AVALIAÇÃO DOS MÉTODOS E GATILHOS LIVE ---
         alerta_gatilho = None
@@ -235,6 +246,7 @@ def main():
         prob_alerta = 0.0
         stake_rec = "1.0u"
         metodo_id = ""
+        exige_stats_corners = False
 
         # MÉTODO 1: Over 0.5 HT (Gatilho: Over 1.5 HT >= 80%, 20'-30' min, Placar 0x0)
         if p_over15ht >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
@@ -244,7 +256,7 @@ def main():
             stake_rec = "1.5u" if p_over15ht >= 90 else "1.0u"
             metodo_id = "M1_OVER05_HT"
 
-        # MÉTODO 2: Over 1.5 FT (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar Exato 0x0)
+        # MÉTODO 2: Over 1.5 FT (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar 0x0)
         elif p_over25 >= 80.0 and 15 <= elapsed <= 40 and total_gols == 0:
             alerta_gatilho = "📌 MÉTODO 2: OVER 1.5 FT LIVE"
             mercado_alerta = "Over 1.5 FT"
@@ -268,13 +280,28 @@ def main():
             stake_rec = "1.5u" if p_btts >= 90 else "1.0u"
             metodo_id = "M4_BTTS_YES"
 
+        # MÉTODO 5: Cantos / Escanteios Live (Gatilho: Cantos >= 70%, 28'-33' min, Total Cantos <= 2)
+        elif p_corners >= 70.0 and 28 <= elapsed <= 33:
+            alerta_gatilho = "📌 MÉTODO 5: CANTS / ESCANTEIOS LIVE"
+            mercado_alerta = "Over Escanteios Limite HT/FT"
+            prob_alerta = p_corners
+            stake_rec = "1.0u"
+            metodo_id = "M5_CORNERS_LIVE"
+            exige_stats_corners = True
+
         # Trava Antiduplicação (Chave Única: fixture_id + metodo_id)
         chave_alerta = f"{fixture_id}_{metodo_id}"
 
         if alerta_gatilho and chave_alerta not in historico_alertas:
-            # BUSCA DE ESTATÍSTICAS EM TEMPO REAL DA API (1 Token gasto apenas se o jogo passar!)
+            # BUSCA DE ESTATÍSTICAS EM TEMPO REAL DA API (Gasta 1 requisição secundária apenas se o jogo for pré-aprovado)
             stats = obter_estatisticas_live(fixture_id, headers)
             
+            total_corners = stats["home_corners"] + stats["away_corners"]
+
+            # Validação Específica do Método 5 (Filtro do total de cantos no live)
+            if exige_stats_corners and total_corners > 2:
+                continue
+
             chutes_home = stats["home_shots_on_target"]
             chutes_away = stats["away_shots_on_target"]
             chutes_totais = chutes_home + chutes_away
@@ -293,6 +320,7 @@ def main():
                 f"⏱️ *Tempo:* {elapsed}' min\n\n"
                 f"📊 *Estatísticas em Tempo Real:*\n"
                 f"🎯 *Chutes no Gol:* {chutes_home} - {chutes_away} (Total: {chutes_totais})\n"
+                f"🚩 *Escanteios Totais:* {total_corners} ({stats['home_corners']} - {stats['away_corners']})\n"
                 f"🛑 *Cartões Vermelhos:* {reds_home} (Casa) | {reds_away} (Fora)\n"
                 f"📈 *Posse de Bola:* {stats['home_possession']} - {stats['away_possession']}\n\n"
                 f"📌 *Mercado:* {mercado_alerta}\n"
