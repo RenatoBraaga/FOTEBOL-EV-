@@ -115,7 +115,7 @@ def main():
             continue
 
         jogos_na_base += 1
-        row = match_csv.iloc  # Corrigido: captura a primeira linha da correspondência
+        row = match_csv.iloc  # CORRIGIDO: iloc extrai a primeira linha encontrada como Series
 
         prob_raw = row.get(col_prob, 0)
         prob = (prob_raw / 100.0) if prob_raw > 1.0 else prob_raw
