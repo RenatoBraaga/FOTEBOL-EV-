@@ -14,7 +14,7 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 LOG_ALERTAS_FILE = "alertas_enviados.json"
 
 # Tenta carregar a planilha v4 ou a sem_branco
-CSV_FILE = "jogos_filtrados_notebooklm_v4.csv"
+CSV_FILE = "agenda_jogos_ev_positiva"
 if not os.path.exists(CSV_FILE):
     CSV_FILE = "jogos_filtrados_notebooklm_sem_branco.csv"
 
