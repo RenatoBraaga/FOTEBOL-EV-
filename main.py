@@ -256,7 +256,7 @@ def main():
             stake_rec = "1.5u" if p_over15ht >= 90 else "1.0u"
             metodo_id = "M1_OVER05_HT"
 
-        # MÉTODO 2: Over 1.5 FT (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar 0x0)
+        # MÉTODO 2: Over 1.5 FT LIVE (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar Exato 0x0)
         elif p_over25 >= 80.0 and 15 <= elapsed <= 40 and total_gols == 0:
             alerta_gatilho = "📌 MÉTODO 2: OVER 1.5 FT LIVE"
             mercado_alerta = "Over 1.5 FT"
