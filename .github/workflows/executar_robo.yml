@@ -2,6 +2,8 @@ name: Executar Robô EV+ FutBET
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [webhook_run]
   schedule:
     - cron: '20,50 * * * *'
 
@@ -11,7 +13,6 @@ permissions:
 jobs:
   run-robot:
     runs-on: ubuntu-latest
-
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
