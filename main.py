@@ -13,10 +13,9 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 LOG_ALERTAS_FILE = "alertas_enviados.json"
 
-# Tenta carregar a planilha v4 ou a sem_branco
-CSV_FILE = "agenda_jogos_ev_positiva.csv"
+CSV_FILE = "jogos_filtrados_notebooklm_v4.csv"
 if not os.path.exists(CSV_FILE):
-    CSV_FILE = "agenda_jogos_ev_positiva.csv"
+    CSV_FILE = "jogos_filtrados_notebooklm_sem_branco.csv"
 
 def carregar_historico_alertas():
     if os.path.exists(LOG_ALERTAS_FILE):
@@ -58,7 +57,7 @@ def enviar_telegram(mensagem):
 def limpar_nome(nome):
     if not isinstance(nome, str): return ""
     nome = nome.lower()
-    for termo in [" fc", " u19", " u20", " u23", " women", " w", " cd", " sd", " cf", " club", " atletico"]:
+    for termo in [" fc", " u19", " u20", " u23", " women", " w", " cd", " sd", " cf", " club", " atletico", " afc", " sc", " fk", " ik", " bk"]:
         nome = nome.replace(termo, "")
     return nome.strip()
 
@@ -87,10 +86,6 @@ def e_liga_elite(league_name):
     return True
 
 def obter_estatisticas_live(fixture_id, headers):
-    """
-    Consulta estatísticas ao vivo (chutes no gol, escanteios, cartões, etc.) 
-    Apenas para jogos pré-qualificados nos gatilhos, economizando requisições.
-    """
     url_stats = f"https://v3.football.api-sports.io/fixtures/statistics?fixture={fixture_id}"
     stats_summary = {
         "home_shots_on_target": 0,
@@ -107,8 +102,7 @@ def obter_estatisticas_live(fixture_id, headers):
         if res.status_code == 200:
             data = res.json().get("response", [])
             if len(data) >= 2:
-                # Time Casa
-                for item in data[0].get("statistics", []):
+                for item in data.get("statistics", []):
                     st_type = item.get("type")
                     val = item.get("value") or 0
                     if st_type == "Shots on Goal": stats_summary["home_shots_on_target"] = val
@@ -116,7 +110,6 @@ def obter_estatisticas_live(fixture_id, headers):
                     elif st_type == "Ball Possession": stats_summary["home_possession"] = str(val)
                     elif st_type == "Corner Kicks": stats_summary["home_corners"] = val
 
-                # Time Fora
                 for item in data[1].get("statistics", []):
                     st_type = item.get("type")
                     val = item.get("value") or 0
@@ -128,7 +121,6 @@ def obter_estatisticas_live(fixture_id, headers):
         print(f"⚠️ Falha ao buscar estatísticas do jogo {fixture_id}: {e}")
     
     return stats_summary
-
 
 def main():
     print("🚀 Iniciando Varredura Quantitativa EV+ com Estratégias Live FutBET...")
@@ -146,7 +138,6 @@ def main():
 
     historico_alertas = carregar_historico_alertas()
 
-    # Mapeamento de Colunas da Planilha
     col_home      = "Time_Casa" if "Time_Casa" in df_base.columns else "Home Team"
     col_away      = "Time_Fora" if "Time_Fora" in df_base.columns else "Away Team"
     col_over25    = "Over25_Pct" if "Over25_Pct" in df_base.columns else "Over25 Average"
@@ -178,7 +169,7 @@ def main():
         return
 
     partidas_live = data["response"]
-    print(f"📡 Partidas ao vivo retornadas pela API no MUNDO agora: {len(partidas_live)}")
+    print(f"📡 Partidas ao vivo na API no mundo agora: {len(partidas_live)}")
 
     if len(partidas_live) == 0:
         print("ℹ️ Nenhuma partida ao vivo no momento no mundo inteiro.")
@@ -195,35 +186,38 @@ def main():
         elapsed = fixture["fixture"]["status"]["elapsed"] or 0
         league_name = fixture["league"]["name"]
         
-        # Placar da API ao vivo
         goals_home = fixture["goals"]["home"] if fixture["goals"]["home"] is not None else 0
         goals_away = fixture["goals"]["away"] if fixture["goals"]["away"] is not None else 0
         total_gols = goals_home + goals_away
         
-        # Filtro de Elite (Exclusão de Séries C/D, Base, Feminino)
         if not e_liga_elite(league_name):
             continue
 
         home_clean = limpar_nome(home_api)
         away_clean = limpar_nome(away_api)
 
-        # Busca flexível no CSV com Similaridade de Nomes
+        # Busca no CSV
         row_dict = None
         for idx, row in df_base.iterrows():
             h_csv = limpar_nome(str(row.get(col_home, "")))
             a_csv = limpar_nome(str(row.get(col_away, "")))
             
-            if (similaridade(home_clean, h_csv) > 0.65 or home_clean in h_csv) and \
-               (similaridade(away_clean, a_csv) > 0.65 or away_clean in a_csv):
+            sim_h = similaridade(home_clean, h_csv)
+            sim_a = similaridade(away_clean, a_csv)
+            
+            if (sim_h > 0.50 or home_clean in h_csv or h_csv in home_clean) and \
+               (sim_a > 0.50 or away_clean in a_csv or a_csv in away_clean):
                 row_dict = row.to_dict()
                 break
 
         if not row_dict:
+            # Log de diagnóstico para entender quais partidas da API não cruzaram com a planilha
+            print(f"⚠️ [SEM CORRESPONDÊNCIA NA BASE] API: '{home_api}' x '{away_api}' ({league_name})")
             continue
 
         jogos_na_base += 1
+        print(f"🔎 [ENCONTRADO NA BASE] {home_api} {goals_home}x{goals_away} {away_api} ({elapsed}')")
 
-        # Extração de Métricas Pré-Jogo (Normalizadas de 0 a 100%)
         p_over25    = safe_float(row_dict.get(col_over25, 0)) or 0.0
         p_over15ht  = safe_float(row_dict.get(col_over15ht, 0)) or 0.0
         p_over15ft  = safe_float(row_dict.get(col_over15ft, 0)) or 0.0
@@ -240,7 +234,6 @@ def main():
 
         p_corners = max(p_corners85, p_corners95)
 
-        # --- AVALIAÇÃO DOS MÉTODOS E GATILHOS LIVE ---
         alerta_gatilho = None
         mercado_alerta = ""
         prob_alerta = 0.0
@@ -248,7 +241,7 @@ def main():
         metodo_id = ""
         exige_stats_corners = False
 
-        # MÉTODO 1: Over 0.5 HT (Gatilho: Over 1.5 HT >= 80%, 20'-30' min, Placar 0x0)
+        # MÉTODO 1: Over 0.5 HT (20'-30' min, 0x0)
         if p_over15ht >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
             alerta_gatilho = "📌 MÉTODO 1: GOL LIMITE HT (Over 0.5 HT)"
             mercado_alerta = "Over 0.5 HT"
@@ -256,7 +249,7 @@ def main():
             stake_rec = "1.5u" if p_over15ht >= 90 else "1.0u"
             metodo_id = "M1_OVER05_HT"
 
-        # MÉTODO 2: Over 1.5 FT LIVE (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar Exato 0x0)
+        # MÉTODO 2: Over 1.5 FT (15'-40' min, 0x0)
         elif p_over25 >= 80.0 and 15 <= elapsed <= 40 and total_gols == 0:
             alerta_gatilho = "📌 MÉTODO 2: OVER 1.5 FT LIVE"
             mercado_alerta = "Over 1.5 FT"
@@ -264,7 +257,7 @@ def main():
             stake_rec = "1.5u" if p_over25 >= 90 else "1.0u"
             metodo_id = "M2_OVER15_FT"
 
-        # MÉTODO 3: Over Limite 70+ (Gatilho: Over 2.5 FT ou Over 1.5 FT >= 80%, Minuto >= 70)
+        # MÉTODO 3: Over Limite 70+ (Minuto >= 70)
         elif (p_over25 >= 80.0 or p_over15ft >= 80.0) and elapsed >= 70:
             alerta_gatilho = "📌 MÉTODO 3: OVER LIMITE 70+ (LATE GOAL)"
             mercado_alerta = f"Over Limite FT (Placar Atual: {goals_home}x{goals_away})"
@@ -272,7 +265,7 @@ def main():
             stake_rec = "1.5u" if prob_alerta >= 90 else "1.0u"
             metodo_id = "M3_OVER_LIMITE_70"
 
-        # MÉTODO 4: Ambas Marcam Live (Gatilho: BTTS >= 80%, 20'-30' min, Placar 0x0)
+        # MÉTODO 4: Ambas Marcam Live (20'-30' min, 0x0)
         elif p_btts >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
             alerta_gatilho = "📌 MÉTODO 4: AMBAS MARCAM LIVE (BTTS YES)"
             mercado_alerta = "Ambas Marcam (Sim)"
@@ -280,7 +273,7 @@ def main():
             stake_rec = "1.5u" if p_btts >= 90 else "1.0u"
             metodo_id = "M4_BTTS_YES"
 
-        # MÉTODO 5: Cantos / Escanteios Live (Gatilho: Cantos >= 70%, 28'-33' min, Total Cantos <= 2)
+        # MÉTODO 5: Cantos Live (28'-33' min)
         elif p_corners >= 70.0 and 28 <= elapsed <= 33:
             alerta_gatilho = "📌 MÉTODO 5: CANTS / ESCANTEIOS LIVE"
             mercado_alerta = "Over Escanteios Limite HT/FT"
@@ -289,17 +282,18 @@ def main():
             metodo_id = "M5_CORNERS_LIVE"
             exige_stats_corners = True
 
-        # Trava Antiduplicação (Chave Única: fixture_id + metodo_id)
         chave_alerta = f"{fixture_id}_{metodo_id}"
 
-        if alerta_gatilho and chave_alerta not in historico_alertas:
-            # BUSCA DE ESTATÍSTICAS EM TEMPO REAL DA API (Gasta 1 requisição secundária apenas se o jogo for pré-aprovado)
+        if alerta_gatilho:
+            if chave_alerta in historico_alertas:
+                print(f"ℹ️ Alerta {chave_alerta} já enviado anteriormente.")
+                continue
+
             stats = obter_estatisticas_live(fixture_id, headers)
-            
             total_corners = stats["home_corners"] + stats["away_corners"]
 
-            # Validação Específica do Método 5 (Filtro do total de cantos no live)
             if exige_stats_corners and total_corners > 2:
+                print(f"⚠️ Método 5 descartado por excesso de cantos ({total_corners}).")
                 continue
 
             chutes_home = stats["home_shots_on_target"]
@@ -311,7 +305,6 @@ def main():
             fair_odd = 100.0 / prob_alerta if prob_alerta > 0 else 1.25
             print(f"🎯 [APROVADO LIVE] {home_api} {goals_home}x{goals_away} {away_api} ({elapsed}') | {mercado_alerta} | Prob: {prob_alerta:.0f}%")
             
-            # Montagem do Alerta com Estatísticas ao Vivo inclusas
             mensagem = (
                 f"🎯 *ALERTA LIVE EV+ FUTBET*\n"
                 f"{alerta_gatilho}\n\n"
@@ -333,9 +326,11 @@ def main():
             historico_alertas.append(chave_alerta)
             salvar_historico_alertas(historico_alertas)
             alertas_enviados += 1
+        else:
+            print(f"ℹ️ {home_api} x {away_api} ({elapsed}') na base, mas fora dos parâmetros dos métodos no momento.")
 
     print("--------------------------------------------------")
-    print(f"📊 Resumo: {jogos_na_base} jogos ao vivo pertenciam à sua planilha.")
+    print(f"📊 Resumo: {jogos_na_base} jogos ao vivo cruzaram com sua planilha.")
     print(f"🏁 Alertas enviados no Telegram: {alertas_enviados}\n")
 
 if __name__ == "__main__":
