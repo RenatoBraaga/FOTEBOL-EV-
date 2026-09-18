@@ -13,10 +13,12 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 LOG_ALERTAS_FILE = "alertas_enviados.json"
 
-# Tenta carregar a planilha v4 ou a sem_branco
+# Suporte automático às variações de nomes do arquivo no repositório
 CSV_FILE = "agenda_jogos_ev_positiva.csv.csv"
 if not os.path.exists(CSV_FILE):
-    CSV_FILE = "agenda_jogos_ev_positiva.csv.csv"
+    CSV_FILE = "jogos_filtrados_notebooklm_v4.csv"
+if not os.path.exists(CSV_FILE):
+    CSV_FILE = "jogos_filtrados_notebooklm_sem_branco.csv"
 
 def carregar_historico_alertas():
     if os.path.exists(LOG_ALERTAS_FILE):
@@ -108,22 +110,24 @@ def obter_estatisticas_live(fixture_id, headers):
             data = res.json().get("response", [])
             if len(data) >= 2:
                 # Time Casa
-                for item in data.get("statistics", []):
-                    st_type = item.get("type")
-                    val = item.get("value") or 0
-                    if st_type == "Shots on Goal": stats_summary["home_shots_on_target"] = val
-                    elif st_type == "Red Cards": stats_summary["home_red_cards"] = val
-                    elif st_type == "Ball Possession": stats_summary["home_possession"] = str(val)
-                    elif st_type == "Corner Kicks": stats_summary["home_corners"] = val
+                if isinstance(data, dict):
+                    for item in data.get("statistics", []):
+                        st_type = item.get("type")
+                        val = item.get("value") or 0
+                        if st_type == "Shots on Goal": stats_summary["home_shots_on_target"] = val
+                        elif st_type == "Red Cards": stats_summary["home_red_cards"] = val
+                        elif st_type == "Ball Possession": stats_summary["home_possession"] = str(val)
+                        elif st_type == "Corner Kicks": stats_summary["home_corners"] = val
 
                 # Time Fora
-                for item in data[1].get("statistics", []):
-                    st_type = item.get("type")
-                    val = item.get("value") or 0
-                    if st_type == "Shots on Goal": stats_summary["away_shots_on_target"] = val
-                    elif st_type == "Red Cards": stats_summary["away_red_cards"] = val
-                    elif st_type == "Ball Possession": stats_summary["away_possession"] = str(val)
-                    elif st_type == "Corner Kicks": stats_summary["away_corners"] = val
+                if isinstance(data[1], dict):
+                    for item in data[1].get("statistics", []):
+                        st_type = item.get("type")
+                        val = item.get("value") or 0
+                        if st_type == "Shots on Goal": stats_summary["away_shots_on_target"] = val
+                        elif st_type == "Red Cards": stats_summary["away_red_cards"] = val
+                        elif st_type == "Ball Possession": stats_summary["away_possession"] = str(val)
+                        elif st_type == "Corner Kicks": stats_summary["away_corners"] = val
     except Exception as e:
         print(f"⚠️ Falha ao buscar estatísticas do jogo {fixture_id}: {e}")
     
@@ -146,15 +150,15 @@ def main():
 
     historico_alertas = carregar_historico_alertas()
 
-    # Mapeamento de Colunas da Planilha
-    col_home      = "Time_Casa" if "Time_Casa" in df_base.columns else "Home Team"
-    col_away      = "Time_Fora" if "Time_Fora" in df_base.columns else "Away Team"
-    col_over25    = "Over25_Pct" if "Over25_Pct" in df_base.columns else "Over25 Average"
-    col_over15ht  = "Over15_HT_Pct" if "Over15_HT_Pct" in df_base.columns else "Over15 FHG HT Average"
-    col_over15ft  = "Over15_FT_Pct" if "Over15_FT_Pct" in df_base.columns else "Over15 Average"
-    col_btts      = "BTTS_Pct" if "BTTS_Pct" in df_base.columns else "BTTS Average"
-    col_corners85 = "Average Over 8.5 Corners" if "Average Over 8.5 Corners" in df_base.columns else "Over85_Corners_Pct"
-    col_corners95 = "Average Over 9.5 Corners" if "Average Over 9.5 Corners" in df_base.columns else "Over95_Corners_Pct"
+    col_home       = "Time_Casa" if "Time_Casa" in df_base.columns else "Home Team"
+    col_away       = "Time_Fora" if "Time_Fora" in df_base.columns else "Away Team"
+    col_over25     = "Over25_Pct" if "Over25_Pct" in df_base.columns else "Over25 Average"
+    col_over15ht   = "Over15_HT_Pct" if "Over15_HT_Pct" in df_base.columns else "Over15 FHG HT Average"
+    col_over15ft   = "Over15_FT_Pct" if "Over15_FT_Pct" in df_base.columns else "Over15 Average"
+    col_btts       = "BTTS_Pct" if "BTTS_Pct" in df_base.columns else "BTTS Average"
+    col_over05_2hg = "Over05_2HG_Pct" if "Over05_2HG_Pct" in df_base.columns else "Over05 2HG Average"
+    col_corners85  = "Average Over 8.5 Corners" if "Average Over 8.5 Corners" in df_base.columns else "Over85_Corners_Pct"
+    col_corners95  = "Average Over 9.5 Corners" if "Average Over 9.5 Corners" in df_base.columns else "Over95_Corners_Pct"
 
     if not API_KEY:
         print("❌ A chave FOOTBALL_API_KEY não foi configurada nos Secrets do GitHub.")
@@ -173,8 +177,15 @@ def main():
         print(f"❌ Erro de conexão com a API: {e}")
         return
 
+    # Diagnosticador explícito de erros da API-Football (Chave inválida / Cota diária excedida)
+    errors = data.get("errors")
+    if errors and (isinstance(errors, dict) and len(errors) > 0 or isinstance(errors, list) and len(errors) > 0):
+        print(f"❌ A API-Football retornou o seguinte ERRO: {errors}")
+        print("💡 Verifique a Secret 'FOOTBALL_API_KEY' no GitHub ou a cota diária de requisições.")
+        return
+
     if response.status_code != 200 or "response" not in data:
-        print(f"❌ Resposta Inválida da API ({response.status_code}): {data.get('errors')}")
+        print(f"❌ Resposta Inválida da API ({response.status_code}): {data}")
         return
 
     partidas_live = data["response"]
@@ -195,19 +206,16 @@ def main():
         elapsed = fixture["fixture"]["status"]["elapsed"] or 0
         league_name = fixture["league"]["name"]
         
-        # Placar da API ao vivo
         goals_home = fixture["goals"]["home"] if fixture["goals"]["home"] is not None else 0
         goals_away = fixture["goals"]["away"] if fixture["goals"]["away"] is not None else 0
         total_gols = goals_home + goals_away
         
-        # Filtro de Elite (Exclusão de Séries C/D, Base, Feminino)
         if not e_liga_elite(league_name):
             continue
 
         home_clean = limpar_nome(home_api)
         away_clean = limpar_nome(away_api)
 
-        # Busca flexível no CSV com Similaridade de Nomes
         row_dict = None
         for idx, row in df_base.iterrows():
             h_csv = limpar_nome(str(row.get(col_home, "")))
@@ -223,24 +231,24 @@ def main():
 
         jogos_na_base += 1
 
-        # Extração de Métricas Pré-Jogo (Normalizadas de 0 a 100%)
-        p_over25    = safe_float(row_dict.get(col_over25, 0)) or 0.0
-        p_over15ht  = safe_float(row_dict.get(col_over15ht, 0)) or 0.0
-        p_over15ft  = safe_float(row_dict.get(col_over15ft, 0)) or 0.0
-        p_btts      = safe_float(row_dict.get(col_btts, 0)) or 0.0
-        p_corners85 = safe_float(row_dict.get(col_corners85, 0)) or 0.0
-        p_corners95 = safe_float(row_dict.get(col_corners95, 0)) or 0.0
+        p_over25     = safe_float(row_dict.get(col_over25, 0)) or 0.0
+        p_over15ht   = safe_float(row_dict.get(col_over15ht, 0)) or 0.0
+        p_over15ft   = safe_float(row_dict.get(col_over15ft, 0)) or 0.0
+        p_btts       = safe_float(row_dict.get(col_btts, 0)) or 0.0
+        p_over05_2hg = safe_float(row_dict.get(col_over05_2hg, 0)) or 0.0
+        p_corners85  = safe_float(row_dict.get(col_corners85, 0)) or 0.0
+        p_corners95  = safe_float(row_dict.get(col_corners95, 0)) or 0.0
 
         if 0 < p_over25 <= 1.0: p_over25 *= 100
         if 0 < p_over15ht <= 1.0: p_over15ht *= 100
         if 0 < p_over15ft <= 1.0: p_over15ft *= 100
         if 0 < p_btts <= 1.0: p_btts *= 100
+        if 0 < p_over05_2hg <= 1.0: p_over05_2hg *= 100
         if 0 < p_corners85 <= 1.0: p_corners85 *= 100
         if 0 < p_corners95 <= 1.0: p_corners95 *= 100
 
         p_corners = max(p_corners85, p_corners95)
 
-        # --- AVALIAÇÃO DOS MÉTODOS E GATILHOS LIVE ---
         alerta_gatilho = None
         mercado_alerta = ""
         prob_alerta = 0.0
@@ -248,57 +256,66 @@ def main():
         metodo_id = ""
         exige_stats_corners = False
 
-        # MÉTODO 1: Over 0.5 HT (Gatilho: Over 1.5 HT >= 80%, 20'-30' min, Placar 0x0)
-        if p_over15ht >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
+        # Odd Alvo desejada para operação live
+        ODD_ALVO = 1.80
+
+        # =================================----------------==================
+        # AVALIAÇÃO DOS MÉTODOS E GATILHOS LIVE AJUSTADOS
+        # =================================----------------==================
+
+        # MÉTODO 1: Gol Limite HT (Over 0.5 HT) -> 15' a 35' min (Placar 0x0)
+        if p_over15ht >= 80.0 and 15 <= elapsed <= 35 and total_gols == 0:
             alerta_gatilho = "📌 MÉTODO 1: GOL LIMITE HT (Over 0.5 HT)"
             mercado_alerta = "Over 0.5 HT"
             prob_alerta = p_over15ht
             stake_rec = "1.5u" if p_over15ht >= 90 else "1.0u"
             metodo_id = "M1_OVER05_HT"
 
-        # MÉTODO 2: Over 1.5 FT (Gatilho: Over 2.5 FT >= 80%, 15'-40' min, Placar 0x0)
-        elif p_over25 >= 80.0 and 15 <= elapsed <= 40 and total_gols == 0:
-            alerta_gatilho = "📌 MÉTODO 2: OVER 1.5 FT LIVE"
+        # MÉTODO 2: Over 1.5 FT Live -> 15' a 60' min (Placar 0x0)
+        # Podendo ser repetido na segunda análise caso continue 0x0
+        elif p_over25 >= 80.0 and 15 <= elapsed <= 60 and total_gols == 0:
+            if elapsed <= 45:
+                alerta_gatilho = "📌 MÉTODO 2: OVER 1.5 FT LIVE (1º Tempo)"
+                metodo_id = "M2_OVER15_FT_1H"
+            else:
+                alerta_gatilho = "📌 MÉTODO 2: OVER 1.5 FT LIVE (2º Tempo - Reavaliação 0x0)"
+                metodo_id = "M2_OVER15_FT_2H"
             mercado_alerta = "Over 1.5 FT"
             prob_alerta = p_over25
             stake_rec = "1.5u" if p_over25 >= 90 else "1.0u"
-            metodo_id = "M2_OVER15_FT"
 
-        # MÉTODO 3: Over Limite 70+ (Gatilho: Over 2.5 FT ou Over 1.5 FT >= 80%, Minuto >= 70)
-        elif (p_over25 >= 80.0 or p_over15ft >= 80.0) and elapsed >= 70:
-            alerta_gatilho = "📌 MÉTODO 3: OVER LIMITE 70+ (LATE GOAL)"
-            mercado_alerta = f"Over Limite FT (Placar Atual: {goals_home}x{goals_away})"
-            prob_alerta = max(p_over25, p_over15ft)
-            stake_rec = "1.5u" if prob_alerta >= 90 else "1.0u"
-            metodo_id = "M3_OVER_LIMITE_70"
-
-        # MÉTODO 4: Ambas Marcam Live (Gatilho: BTTS >= 80%, 20'-30' min, Placar 0x0)
-        elif p_btts >= 80.0 and 20 <= elapsed <= 30 and total_gols == 0:
-            alerta_gatilho = "📌 MÉTODO 4: AMBAS MARCAM LIVE (BTTS YES)"
+        # MÉTODO AMBAS MARCAM LIVE (BTTS Yes) -> 0' a 35' min (Placar 0x0)
+        elif p_btts >= 80.0 and 0 <= elapsed <= 35 and total_gols == 0:
+            alerta_gatilho = "📌 AMBAS MARCAM LIVE (BTTS YES)"
             mercado_alerta = "Ambas Marcam (Sim)"
             prob_alerta = p_btts
             stake_rec = "1.5u" if p_btts >= 90 else "1.0u"
             metodo_id = "M4_BTTS_YES"
 
-        # MÉTODO 5: Cantos / Escanteios Live (Gatilho: Cantos >= 70%, 28'-33' min, Total Cantos <= 2)
-        elif p_corners >= 70.0 and 28 <= elapsed <= 33:
-            alerta_gatilho = "📌 MÉTODO 5: CANTS / ESCANTEIOS LIVE"
-            mercado_alerta = "Over Escanteios Limite HT/FT"
+        # MÉTODO CANTOS: Escanteios HT -> 19' a 35' min (1º Tempo, Cantos <= 2)
+        elif p_corners >= 70.0 and 19 <= elapsed <= 35:
+            alerta_gatilho = "📌 CANTS / ESCANTEIOS LIVE HT"
+            mercado_alerta = "Over Escanteios Limite HT"
             prob_alerta = p_corners
             stake_rec = "1.0u"
-            metodo_id = "M5_CORNERS_LIVE"
+            metodo_id = "M5_CORNERS_HT"
             exige_stats_corners = True
+
+        # MOMENTO 3: Gol no Final / Late Goal -> 68' a 80' min
+        elif (p_over05_2hg >= 80.0 or p_over25 >= 80.0 or p_over15ft >= 80.0) and 68 <= elapsed <= 80:
+            alerta_gatilho = "📌 MOMENTO 3: OVER LIMITE 70+ (LATE GOAL)"
+            mercado_alerta = f"Over Limite FT (Placar Atual: {goals_home}x{goals_away})"
+            prob_alerta = max(p_over05_2hg, p_over25, p_over15ft)
+            stake_rec = "1.5u" if prob_alerta >= 90 else "1.0u"
+            metodo_id = "M3_OVER_LIMITE_70"
 
         # Trava Antiduplicação (Chave Única: fixture_id + metodo_id)
         chave_alerta = f"{fixture_id}_{metodo_id}"
 
         if alerta_gatilho and chave_alerta not in historico_alertas:
-            # BUSCA DE ESTATÍSTICAS EM TEMPO REAL DA API
             stats = obter_estatisticas_live(fixture_id, headers)
-            
             total_corners = stats["home_corners"] + stats["away_corners"]
 
-            # Validação Específica do Método 5 (Filtro do total de cantos no live)
             if exige_stats_corners and total_corners > 2:
                 continue
 
@@ -309,9 +326,11 @@ def main():
             reds_away = stats["away_red_cards"]
 
             fair_odd = 100.0 / prob_alerta if prob_alerta > 0 else 1.25
-            print(f"🎯 [APROVADO LIVE] {home_api} {goals_home}x{goals_away} {away_api} ({elapsed}') | {mercado_alerta} | Prob: {prob_alerta:.0f}%")
+            ev_estimado = ((prob_alerta / 100.0) * ODD_ALVO) - 1.0
+            ev_pct = ev_estimado * 100.0
+
+            print(f"🎯 [APROVADO LIVE] {home_api} {goals_home}x{goals_away} {away_api} ({elapsed}') | {mercado_alerta} | Prob: {prob_alerta:.0f}% | EV: +{ev_pct:.1f}%")
             
-            # Montagem do Alerta com Estatísticas ao Vivo inclusas
             mensagem = (
                 f"🎯 *ALERTA LIVE EV+ FUTBET*\n"
                 f"{alerta_gatilho}\n\n"
@@ -325,7 +344,9 @@ def main():
                 f"📈 *Posse de Bola:* {stats['home_possession']} - {stats['away_possession']}\n\n"
                 f"📌 *Mercado:* {mercado_alerta}\n"
                 f"📈 *Probabilidade Base:* {prob_alerta:.0f}%\n"
+                f"🎯 *Odd Alvo Recomendada:* @{ODD_ALVO:.2f}\n"
                 f"📐 *Odd Justa Estimada:* @{fair_odd:.2f}\n"
+                f"💵 *EV+ Estimado (Odd @{ODD_ALVO:.2f}):* +{ev_pct:.1f}%\n"
                 f"🛡️ *Stake Recomendada:* {stake_rec}\n\n"
                 f"🔗 https://www.bet365.bet.br/#/AX/\n"
             )
