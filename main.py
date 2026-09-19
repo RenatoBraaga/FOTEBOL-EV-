@@ -35,7 +35,6 @@ def carregar_historico_alertas():
             with open(LOG_ALERTAS_FILE, "r") as f:
                 data = json.load(f)
                 if isinstance(data, list):
-                    # Converte versão antiga (lista de chaves) para dicionário
                     return {k: {"status": "PENDENTE"} for k in data}
                 return data
         except Exception:
@@ -121,7 +120,6 @@ def obter_estatisticas_live(fixture_id, headers):
         if res.status_code == 200:
             data = res.json().get("response", [])
             if len(data) >= 2:
-                # Time Casa
                 if isinstance(data, dict):
                     for item in data.get("statistics", []):
                         st_type = item.get("type")
@@ -131,7 +129,6 @@ def obter_estatisticas_live(fixture_id, headers):
                         elif st_type == "Ball Possession": stats_summary["home_possession"] = str(val)
                         elif st_type == "Corner Kicks": stats_summary["home_corners"] = val
 
-                # Time Fora
                 if isinstance(data[1], dict):
                     for item in data[1].get("statistics", []):
                         st_type = item.get("type")
@@ -147,17 +144,16 @@ def obter_estatisticas_live(fixture_id, headers):
 
 
 # =================================----------------==================
-# MÓDULO DE AUDITORIA LIVE (GREEN / RED EM TEMPO REAL)
+# MÓDULO DE AUDITORIA LIVE (GREEN / RED EM TEMPO REAL E PÓS-JOGO)
 # =================================--------------------------------==
-def auditar_apostas_pendentes(partidas_live, historico_alertas):
+def auditar_apostas_pendentes(partidas_live, historico_alertas, headers):
     """
     Varre as apostas pendentes e verifica se bateram GREEN ou RED
-    com base no placar e no minuto atual da partida.
+    tanto nos jogos ao vivo quanto nos encerrados.
     """
     if not historico_alertas:
         return
 
-    # Cria um mapa das partidas ao vivo atuais por fixture_id
     mapa_live = {}
     for fix in partidas_live:
         f_id = fix["fixture"]["id"]
@@ -186,12 +182,37 @@ def auditar_apostas_pendentes(partidas_live, historico_alertas):
         away = item.get("away", "Visitante")
         mercado = item.get("mercado", "")
 
-        # Se a partida está na lista live
+        live_data = None
+
         if f_id in mapa_live:
-            live = mapa_live[f_id]
-            tot_gols = live["total_goals"]
-            elapsed = live["elapsed"]
-            status_game = live["status"]
+            live_data = mapa_live[f_id]
+        else:
+            # O jogo NÃO está mais na lista de live -> busca resultado encerrado na API
+            try:
+                url_fix = f"https://v3.football.api-sports.io/fixtures?id={f_id}"
+                res = requests.get(url_fix, headers=headers, timeout=10)
+                if res.status_code == 200:
+                    resp = res.json().get("response", [])
+                    if resp:
+                        fix_info = resp
+                        st_short = fix_info["fixture"]["status"]["short"]
+                        g_h = fix_info["goals"]["home"] if fix_info["goals"]["home"] is not None else 0
+                        g_a = fix_info["goals"]["away"] if fix_info["goals"]["away"] is not None else 0
+                        el = fix_info["fixture"]["status"]["elapsed"] or 90
+                        live_data = {
+                            "status": st_short,
+                            "elapsed": el,
+                            "goals_home": g_h,
+                            "goals_away": g_a,
+                            "total_goals": g_h + g_a
+                        }
+            except Exception as e:
+                print(f"⚠️ Erro ao consultar resultado final do jogo {f_id}: {e}")
+
+        if live_data:
+            tot_gols = live_data["total_goals"]
+            elapsed = live_data["elapsed"]
+            status_game = live_data["status"]
 
             NOVO_STATUS = None
 
@@ -211,16 +232,15 @@ def auditar_apostas_pendentes(partidas_live, historico_alertas):
 
             # --- M4: Ambas Marcam (BTTS) ---
             elif metodo_id == "M4_BTTS_YES":
-                if live["goals_home"] > 0 and live["goals_away"] > 0:
+                if live_data["goals_home"] > 0 and live_data["goals_away"] > 0:
                     NOVO_STATUS = "GREEN"
                 elif status_game in ["FT", "AET", "PEN"]:
                     NOVO_STATUS = "RED"
 
             # --- M5: Cantos HT ---
             elif metodo_id == "M5_CORNERS_HT":
-                # Cantos resolvidos no intervalo/fim do jogo
                 if status_game in ["HT", "2H", "FT", "AET", "PEN"]:
-                    NOVO_STATUS = "GREEN"  # Marcado como green caso mantido filtro
+                    NOVO_STATUS = "GREEN"
 
             # --- M3: Late Goal (Gol no Final 70+) ---
             elif metodo_id == "M3_OVER_LIMITE_70":
@@ -238,7 +258,7 @@ def auditar_apostas_pendentes(partidas_live, historico_alertas):
                 
                 msg_auditoria = (
                     f"{emoji}\n"
-                    f"⚽ *{home} {live['goals_home']} x {live['goals_away']} {away}*\n"
+                    f"⚽ *{home} {live_data['goals_home']} x {live_data['goals_away']} {away}*\n"
                     f"📌 *Mercado:* {mercado}\n"
                     f"💵 *Resultado:* {NOVO_STATUS} ({lucro_str})\n"
                 )
@@ -252,17 +272,13 @@ def auditar_apostas_pendentes(partidas_live, historico_alertas):
 # MÓDULO DE FECHAMENTO DIÁRIO (ENVIADO ÀS 23h55 BRT)
 # =================================--------------------------------==
 def enviar_relatorio_fechamento_diario(historico_alertas, forcar=False):
-    """
-    Gera e envia o resumo diário de ROI, Winrate e P&L no Telegram às 23h55 BRT.
-    """
+    """Gera e envia o resumo diário de ROI, Winrate e P&L no Telegram às 23h55 BRT."""
     agora_brt = obter_horario_brt()
     hoje_str = agora_brt.strftime("%Y-%m-%d")
 
-    # Verifica se estamos na janela das 23h50 - 23h59 BRT ou se foi forçado
     if not forcar and not (agora_brt.hour == 23 and agora_brt.minute >= 50):
         return
 
-    # Evita enviar o fechamento mais de uma vez no mesmo dia
     chave_fechamento_hoje = f"FECHAMENTO_ENVIADO_{hoje_str}"
     if historico_alertas.get(chave_fechamento_hoje) and not forcar:
         return
@@ -375,7 +391,6 @@ def main():
         print(f"❌ Erro de conexão com a API: {e}")
         return
 
-    # Diagnosticador explícito de erros da API-Football
     errors = data.get("errors")
     if errors and (isinstance(errors, dict) and len(errors) > 0 or isinstance(errors, list) and len(errors) > 0):
         print(f"❌ A API-Football retornou o seguinte ERRO: {errors}")
@@ -389,8 +404,8 @@ def main():
     partidas_live = data["response"]
     print(f"📡 Partidas ao vivo retornadas pela API no MUNDO agora: {len(partidas_live)}")
 
-    # Executa Auditoria das Apostas Pendentes em Tempo Real
-    auditar_apostas_pendentes(partidas_live, historico_alertas)
+    # Executa Auditoria das Apostas Pendentes (Tanto Live quanto Encerradas)
+    auditar_apostas_pendentes(partidas_live, historico_alertas, headers)
 
     if len(partidas_live) == 0:
         print("ℹ️ Nenhuma partida ao vivo no momento no mundo inteiro.")
@@ -551,7 +566,6 @@ def main():
             )
             enviar_telegram(mensagem)
             
-            # Registra no histórico com objeto detalhado para auditoria
             historico_alertas[chave_alerta] = {
                 "fixture_id": fixture_id,
                 "metodo_id": metodo_id,
@@ -567,7 +581,6 @@ def main():
             salvar_historico_alertas(historico_alertas)
             alertas_enviados += 1
 
-    # Executa o Fechamento Diário se estiver no final do dia
     enviar_relatorio_fechamento_diario(historico_alertas)
 
     print("--------------------------------------------------")
