@@ -1,0 +1,434 @@
+date_GMT,Country,League,Home Team,Away Team,Home Team Points Per Game (Pre-Match),Away Team Points Per Game (Pre-Match),Average Goals,BTTS Average,Over15 Average,Over25 Average,Average Corners,Average Cards,Home Team Pre-Match xG,Away Team Pre-Match xG,Odds_Home_Win,Odds_Draw,Odds_Away_Win,Odds_Over15,Odds_Over25,Odds_BTTS_Yes,Odds_DoubleChance_1x,Odds_DoubleChance_x2
+Sep 20 2026 - 3:15am,Japan,Kyushu Soccer League,Miyakonojo,Kyushu Mitsubishi Motors,1.0,2.29,3.5,45,77,68,3.33,-1.71,1.62,0.0,,,,,1.44,,,
+Sep 20 2026 - 5:00am,Japan,Kansai Soccer League,Velago Ikoma,Basara Hyogo,1.62,2.15,2.73,42,70,50,6.08,-0.61,1.3,1.8,4.4,4.0,1.57,,1.66,,,
+Sep 20 2026 - 5:00am,Japan,Kansai Soccer League,Cento Cuore Harima,Moriyama Samurai,1.85,0.46,2.62,46,74,46,9.0,-0.85,1.8,0.95,1.2,5.5,10.6,,1.7,,,
+Sep 20 2026 - 5:00am,Japan,Tohoku Soccer League,Blancdieu Hirosaki,Shichinohe,2.43,1.0,3.65,32,83,68,4.0,-1.65,1.56,0.97,,,,,1.44,,,
+Sep 20 2026 - 6:00am,Japan,Kanto Soccer League,Nihon University,Shibuya City,0.63,1.38,3.1,44,78,53,14.5,-1.63,1.87,1.55,3.4,3.64,1.85,,1.6,,,
+Sep 20 2026 - 8:00am,Japan,Chugoku Soccer League,Intl Pacific UFC,Fukuyama City,0.81,2.88,3.32,41,82,66,7.0,-1.07,0.84,1.81,7.07,4.4,1.35,,1.53,,,
+Sep 20 2026 - 8:30am,Japan,Kanto Soccer League,Tokyo United,Toho Titanium,2.13,2.44,2.82,47,75,57,9.5,-1.0,1.46,1.12,2.83,3.25,2.23,,1.9,,,
+Sep 20 2026 - 9:00am,Japan,Chugoku Soccer League,SRC Hiroshima,Baleine Shimonoseki,1.81,1.53,2.89,52,71,52,8.08,-0.84,1.12,1.27,2.38,3.32,2.5,,1.61,,,
+Sep 20 2026 - 10:00am,Spain,División De Honor Juvenil Group 6,Mensajero U19,Las Palmas U19,1.5,3.0,4.5,50,100,75,7.5,-2.0,0.0,2.42,5.64,4.9,1.44,,,,,
+Sep 20 2026 - 11:00am,Sweden,Division 2 Sodra Gotaland,Växjö Norra,Nosaby,1.57,1.52,3.24,60,93,69,10.2,-2.0,1.37,1.31,1.8,3.8,3.4,1.11,1.43,1.44,1.17,1.84
+Sep 20 2026 - 11:15am,Czech Republic,FNL,Kladno,Příbram,2.33,1.5,2.63,67,84,54,9.08,2.0,1.49,1.33,2.2,3.4,2.9,1.15,1.57,1.5,1.35,1.55
+Sep 20 2026 - 11:30am,Belgium,Pro League,Royal Antwerp FC,Union Saint-Gilloise,1.33,3.0,5.0,84,100,100,9.66,3.0,2.03,1.89,4.95,4.05,1.58,1.16,1.64,1.67,1.23,1.16
+Sep 20 2026 - 11:30am,Germany,2. Bundesliga,Arminia Bielefeld,Heidenheim,2.0,1.5,3.25,50,75,75,7.5,3.5,1.39,1.0,2.1,3.7,3.14,1.13,1.51,1.45,1.25,1.67
+Sep 20 2026 - 11:30am,Germany,2. Bundesliga,Energie Cottbus,St. Pauli,1.5,1.0,4.75,100,100,100,11.0,4.0,1.72,1.36,3.2,3.7,2.09,1.14,1.47,1.36,1.68,1.35
+Sep 20 2026 - 11:30am,Germany,2. Bundesliga,Hannover 96,Bochum,0.5,3.0,2.25,50,50,50,9.5,7.5,1.44,1.53,1.75,3.6,3.6,1.11,1.42,1.44,1.19,1.83
+Sep 20 2026 - 11:45am,Greece,Super League 2,Kallithea,Panserraikos,1.5,1.5,2.0,50,50,50,6.5,0.0,1.01,1.42,2.37,2.8,2.87,1.51,2.52,2.11,1.31,1.44
+Sep 20 2026 - 12:00pm,Sweden,Damallsvenskan,Kristianstad,Piteå Women,1.56,1.13,2.57,47,77,53,10.32,1.28,1.16,1.2,1.8,3.5,3.6,1.2,1.77,1.62,1.19,1.82
+Sep 20 2026 - 12:00pm,Sweden,Allsvenskan,Djurgården,Elfsborg,1.73,1.3,3.07,58,81,62,9.36,2.98,1.89,1.33,1.5,4.0,5.0,1.12,1.6,1.66,1.14,2.48
+Sep 20 2026 - 12:00pm,Sweden,Allsvenskan,Halmstad,AIK,0.8,1.82,2.61,61,86,47,8.17,4.52,1.35,1.26,3.2,3.4,1.95,1.15,1.61,1.57,1.8,1.3
+Sep 20 2026 - 12:00pm,Sweden,Allsvenskan,Kalmar,Häcken,1.7,1.6,2.7,45,80,50,11.2,2.9,1.38,1.46,2.8,3.4,2.35,1.17,1.72,1.53,1.3,1.4
+Sep 20 2026 - 12:00pm,Norway,2 Division Group 2,Grorud,Kjelsås,1.79,2.26,3.16,58,76,63,8.84,3.05,1.59,1.68,2.4,3.42,2.5,1.1,1.47,1.4,1.21,1.47
+Sep 20 2026 - 12:00pm,Norway,3. Division Group 5,Lillestrøm II,Fauske / Sprint,1.42,1.47,5.82,92,95,95,8.82,-1.47,1.9,1.76,1.3,5.75,5.25,1.01,1.07,1.13,1.06,3.4
+Sep 20 2026 - 12:00pm,Denmark,Superliga,Brøndby,København,2.25,2.25,3.75,38,88,88,12.75,3.75,2.03,1.38,3.0,3.6,2.17,1.18,1.63,1.57,1.25,1.3
+Sep 20 2026 - 12:00pm,Denmark,Superliga,SønderjyskE,Randers,0.25,1.0,2.71,25,54,54,8.67,4.58,1.3,1.14,2.71,3.4,2.3,1.18,1.72,1.6,1.27,1.4
+Sep 20 2026 - 12:00pm,Switzerland,Super League,Vaduz,Thun,2.0,1.5,5.42,100,100,100,9.0,3.33,1.87,1.53,2.36,3.95,2.51,1.04,1.28,1.36,1.22,1.57
+Sep 20 2026 - 12:00pm,Scotland,SWPL 1,Hibernian W,Montrose W,2.0,0.0,4.25,25,100,100,5.0,0.0,2.03,0.41,1.03,13.0,70.0,,1.22,,,
+Sep 20 2026 - 12:00pm,Scotland,SWPL 1,Glasgow City W,Partick Thistle Women,1.5,2.0,3.75,50,100,75,17.5,0.0,2.56,2.41,1.01,13.0,100.0,,1.16,,,
+Sep 20 2026 - 12:00pm,Spain,La Liga,Getafe CF,Málaga CF,1.67,0.33,2.17,50,84,17,8.67,4.67,1.18,0.95,2.0,3.1,4.15,1.5,2.46,2.2,1.36,1.75
+Sep 20 2026 - 12:00pm,Spain,Segunda División,CE Sabadell FC,Real Oviedo,3.0,3.0,2.5,25,50,50,7.5,6.0,1.89,1.3,2.15,2.9,3.4,1.5,2.6,1.98,1.34,1.57
+Sep 20 2026 - 12:00pm,Germany,2. Frauen Bundesliga,Hoffenheim II Women,Turbine Potsdam,0.33,1.0,3.5,84,84,84,0.0,0.0,0.0,0.0,2.73,4.12,2.0,,,,,
+Sep 20 2026 - 12:00pm,Germany,2. Frauen Bundesliga,Ingolstadt W,Borussia M'gladbach Women,2.0,1.5,4.42,84,84,84,0.0,0.0,0.0,0.0,1.75,4.53,3.14,,,,,
+Sep 20 2026 - 12:00pm,Germany,2. Frauen Bundesliga,Bochum Women,Koln II Women,3.0,0.0,3.67,25,100,75,0.0,0.0,0.0,0.0,1.01,10.0,17.0,,,,,
+Sep 20 2026 - 12:00pm,Germany,2. Frauen Bundesliga,Eintracht Frankfurt II W,Hertha BSC W,1.5,2.0,2.34,34,50,50,0.0,0.0,0.0,0.0,5.88,4.56,1.39,,,,,
+Sep 20 2026 - 12:00pm,Denmark,1st Division,AaB,Vendsyssel,1.25,1.25,2.38,50,75,38,10.25,3.0,1.38,1.14,1.88,3.6,3.6,1.25,1.85,1.69,1.22,1.99
+Sep 20 2026 - 12:00pm,Germany,Frauen Bundesliga,Hamburger SV W,Nürnberg W,1.0,0.5,2.25,100,100,25,9.0,4.0,1.2,2.02,2.2,3.48,2.73,1.13,1.55,1.47,1.46,1.4
+Sep 20 2026 - 12:00pm,Switzerland,Challenge League,Yverdon Sport,Stade Lausanne-Ouchy,2.0,2.0,2.63,88,100,38,10.5,3.25,1.67,1.78,2.25,3.55,2.9,1.11,1.56,1.42,1.29,1.51
+Sep 20 2026 - 12:00pm,Turkey,2 Lig Kirmizi,Kahramanmaraş İstiklalsp,Sakaryaspor,1.0,3.0,2.75,50,75,50,6.0,4.0,0.0,1.35,3.1,3.5,2.0,,1.75,,,
+Sep 20 2026 - 12:00pm,Turkey,2 Lig Kirmizi,Hekimoğlu Trabzon,Ankara Demirspor,0.0,3.0,2.75,50,50,50,10.5,-0.5,1.41,1.1,2.9,3.25,2.15,1.21,1.77,1.62,1.6,1.33
+Sep 20 2026 - 12:00pm,Poland,4 Liga Pomorska,Sokół BW,Starogard Gdański,1.57,1.43,3.58,79,93,79,17.5,-1.14,2.9,1.64,2.29,3.72,2.4,,1.44,,,
+Sep 20 2026 - 12:00pm,Poland,4 Liga Pomorska,Gryf Wejherowo,Pogoń Lębork,2.14,2.43,2.93,72,86,57,10.33,-2.0,1.69,1.55,2.13,3.68,2.72,,1.5,,,
+Sep 20 2026 - 12:30pm,Norway,Eliteserien,Vålerenga,Fredrikstad,1.3,1.0,3.4,55,80,65,11.2,4.0,1.82,1.19,1.97,3.82,3.5,1.13,1.47,1.46,1.3,1.8
+Sep 20 2026 - 12:30pm,Sweden,Ettan North,Piteå,Järfälla,0.68,0.82,3.25,57,89,62,7.68,2.05,1.1,1.16,1.96,3.85,3.25,1.13,1.55,1.5,1.2,1.73
+Sep 20 2026 - 12:30pm,Netherlands,Eredivisie,Twente,PSV,3.0,3.0,3.5,67,84,67,16.0,3.0,2.9,2.37,2.87,4.2,2.15,1.05,1.22,1.2,1.2,1.4
+Sep 20 2026 - 12:30pm,Netherlands,Eredivisie,AZ,Telstar,2.33,1.33,2.5,50,67,33,13.0,1.67,2.08,0.87,1.26,6.5,9.0,1.04,1.25,1.55,1.03,4.2
+Sep 20 2026 - 12:30pm,Austria,Bundesliga,Hartberg,LASK Linz,1.0,2.0,3.0,50,100,50,15.0,4.0,1.19,2.49,8.1,5.5,1.29,1.1,1.47,1.8,1.05,1.07
+Sep 20 2026 - 12:30pm,Austria,Bundesliga,Ried,Wolfsberger AC,1.33,0.5,1.75,59,59,42,9.0,5.0,1.58,1.08,1.91,3.52,3.65,1.16,1.7,1.57,1.25,1.82
+Sep 20 2026 - 12:30pm,England,Championship,Norwich City,Bolton Wanderers,2.0,0.33,3.34,67,84,84,11.0,5.66,1.96,1.21,1.4,5.2,6.8,1.11,1.4,1.62,1.15,2.75
+Sep 20 2026 - 12:30pm,Czech Republic,FNL,Baník Ostrava U21,Ústí nad Labem,0.5,2.33,1.75,38,54,25,8.83,3.67,1.82,1.17,2.16,3.65,3.0,1.12,1.53,1.44,1.36,1.58
+Sep 20 2026 - 12:30pm,Poland,1. Liga,Pogoń Siedlce,Arka Gdynia,1.75,0.75,2.0,25,75,25,7.25,3.25,0.84,1.08,4.1,3.3,1.95,1.25,1.91,1.75,1.75,1.22
+Sep 20 2026 - 12:30pm,Switzerland,1. Liga Classic,Bassecourt,Münsingen,1.0,0.33,3.25,59,67,67,9.5,-1.66,1.02,1.55,2.06,3.62,2.87,,,,,
+Sep 20 2026 - 12:30pm,Poland,2. Liga,Śląsk Wrocław II,Hutnik Kraków,0.75,1.25,3.25,63,75,50,11.75,0.0,1.4,1.78,2.79,3.5,2.15,1.14,1.58,1.48,1.22,1.36
+Sep 20 2026 - 12:30pm,Italy,Serie C Group C,Monopoli,Crotone,1.4,0.4,1.5,20,40,10,7.6,3.0,1.15,1.81,2.08,3.15,3.7,1.4,2.3,1.91,1.22,1.62
+Sep 20 2026 - 12:30pm,Italy,Serie C Group A,Ospitaletto,Cittadella,2.2,3.0,2.6,50,90,50,10.6,2.0,1.78,1.88,2.8,3.2,2.4,1.28,2.03,1.73,1.44,1.4
+Sep 20 2026 - 12:30pm,Italy,Serie C Group A,Novara,Athletic Carpi,1.0,1.0,2.7,60,60,60,7.4,5.4,1.39,1.46,1.91,3.15,3.95,1.32,2.05,1.85,1.25,1.8
+Sep 20 2026 - 12:30pm,Italy,Serie C Group B,Vado,Pescara,0.8,1.0,2.8,50,70,40,11.6,3.0,1.32,2.05,3.3,3.4,1.91,1.21,1.74,1.67,1.22,1.25
+Sep 20 2026 - 12:30pm,Italy,Serie C Group B,Reggiana,Latina,2.2,1.0,2.8,80,90,50,11.4,4.0,1.7,1.75,1.8,3.3,3.98,1.35,2.01,1.88,1.14,1.85
+Sep 20 2026 - 12:30pm,Italy,Serie D Group H,Ischia,Nardò,0.33,0.67,2.33,50,67,34,10.0,-1.34,1.74,1.07,2.46,3.05,2.7,,,,,
+Sep 20 2026 - 12:30pm,Italy,Serie D Group H,Gravina,Real Forio,2.33,2.0,3.0,67,84,67,5.0,-1.34,1.16,0.53,1.75,3.4,4.5,,,,,
+Sep 20 2026 - 12:30pm,Turkey,3. Lig Group 2,Etimesgut Belediyespor,Tire 1922 Spor,1.5,1.5,2.5,50,50,50,6.0,-0.5,1.18,1.05,1.34,3.9,5.91,,1.9,,,
+Sep 20 2026 - 12:30pm,Turkey,2 Lig Beyaz,68 Aksaray Belediyespor,İnegöl Kafkas Gençlik,2.0,1.5,4.25,75,100,100,4.0,-0.5,0.0,0.0,1.65,3.6,4.33,,1.61,,,
+Sep 20 2026 - 12:30pm,Turkey,2 Lig Beyaz,Erbaaspor,Sebat Gençlikspor,0.5,0.5,5.25,100,100,100,7.0,3.0,1.07,0.21,2.8,3.3,2.13,,1.8,,,
+Sep 20 2026 - 12:30pm,Turkey,2 Lig Beyaz,Kastamonuspor 1966,Hatayspor,0.0,0.5,2.5,0,75,50,0.0,1.0,0.0,0.0,3.1,3.6,1.95,1.22,1.73,1.62,1.22,1.3
+Sep 20 2026 - 12:30pm,Greece,Super League K19,Volos NFC U19,AEK Athens U19,3.0,3.0,4.75,25,100,100,11.5,0.0,2.08,2.17,3.6,3.6,1.8,,,,,
+Sep 20 2026 - 12:45pm,Poland,Ekstraklasa,Zagłębie Lubin,Wisła Płock,2.5,1.0,2.63,63,88,63,12.0,4.75,1.75,1.8,2.45,3.3,2.85,1.31,2.12,1.75,1.4,1.51
+Sep 20 2026 - 1:00pm,Sweden,Damallsvenskan,Norrköping W,Rosengard Women,0.67,1.0,2.39,45,84,39,10.56,1.89,1.27,1.68,3.03,3.38,2.07,1.2,1.74,1.61,1.59,1.33
+Sep 20 2026 - 1:00pm,Norway,Toppserien,Fortuna Ålesund,Molde W,2.29,1.43,3.29,72,79,64,14.0,1.28,2.14,1.53,1.29,5.0,7.48,,,,,
+Sep 20 2026 - 1:00pm,Sweden,Superettan,Helsingborg,Norrby,1.25,0.75,2.71,63,88,46,10.0,2.75,1.43,1.24,2.16,3.55,2.98,1.21,1.76,1.62,1.35,1.73
+Sep 20 2026 - 1:00pm,Norway,2 Division Group 2,Stjørdals-Blink,Lørenskog,1.26,1.58,3.4,66,79,66,8.78,1.85,1.31,1.5,2.05,3.6,2.87,1.08,1.41,1.36,1.2,1.67
+Sep 20 2026 - 1:00pm,Norway,3. Division Group 2,Molde II,Melhus,1.37,1.84,4.84,68,95,84,10.87,-1.58,1.5,1.86,2.79,4.35,1.92,1.02,1.18,1.22,1.12,1.43
+Sep 20 2026 - 1:00pm,Norway,3. Division Group 2,Orkla,Aalesund II,1.0,1.06,4.71,73,97,84,7.75,-1.46,1.04,1.1,2.21,4.15,2.34,1.05,1.15,1.17,1.14,1.5
+Sep 20 2026 - 1:00pm,Sweden,Ettan North,Stocksund,Umeå,0.64,1.18,3.7,66,86,68,9.95,2.91,1.5,1.43,2.47,3.43,2.1,,1.36,,,
+Sep 20 2026 - 1:00pm,Sweden,Division 2 Sodra Gotaland,IFK Trelleborg,Sölvesborg,1.95,1.19,3.03,65,81,60,13.21,-2.0,1.6,1.53,1.36,4.4,4.9,1.1,1.36,1.52,1.14,2.8
+Sep 20 2026 - 1:00pm,Sweden,Division 2 Vastra Gotaland,Galtabäcks,Vastra Frolunda,0.81,1.57,3.29,64,88,64,9.77,-1.09,1.32,1.24,2.7,3.7,2.15,1.11,1.44,1.4,1.25,1.4
+Sep 20 2026 - 1:00pm,Italy,Serie A,Parma,Genoa,0.5,0.0,1.25,25,25,0,6.5,3.0,1.06,0.82,3.15,2.95,2.45,1.46,2.29,1.95,1.42,1.4
+Sep 20 2026 - 1:00pm,Italy,Serie A,Frosinone,Como,1.5,2.33,3.17,75,75,59,11.0,2.33,1.36,2.15,5.25,4.6,1.53,1.1,1.4,1.55,1.13,1.12
+Sep 20 2026 - 1:00pm,France,Ligue 1,Auxerre,Brest,1.5,2.0,3.0,75,75,75,12.5,3.0,1.68,2.31,2.8,3.6,2.44,1.21,1.75,1.62,1.25,1.44
+Sep 20 2026 - 1:00pm,England,Premier League,AFC Bournemouth,Liverpool,1.0,2.0,3.0,75,100,50,10.5,7.0,2.03,2.06,3.05,3.7,2.15,1.13,1.49,1.44,1.67,1.39
+Sep 20 2026 - 1:00pm,England,Premier League,Leeds United,Crystal Palace,2.0,1.5,3.5,75,100,50,5.5,1.0,1.41,1.24,1.7,4.15,4.6,1.2,1.67,1.62,1.18,2.05
+Sep 20 2026 - 1:00pm,England,Premier League,Manchester City,Sunderland,3.0,0.5,2.25,75,75,50,10.0,3.5,1.69,1.47,1.35,5.5,8.0,1.13,1.57,1.87,1.05,3.1
+Sep 20 2026 - 1:00pm,Czech Republic,First League,Jablonec,Zlín,2.25,0.0,3.59,75,88,88,10.92,4.42,2.09,1.25,1.4,4.0,6.5,1.22,1.95,2.05,1.1,2.62
+Sep 20 2026 - 1:00pm,Czech Republic,First League,Sigma Olomouc,Sparta Praha,2.33,0.75,3.46,59,100,88,12.0,3.0,1.85,1.61,3.1,3.4,2.0,1.13,1.62,1.57,1.22,1.35
+Sep 20 2026 - 1:00pm,Italy,Campionato Primavera 1,Genoa U20,Atalanta U20,0.5,1.5,3.75,50,75,50,0.0,0.0,0.0,0.0,2.35,3.65,2.35,,,,,
+Sep 20 2026 - 1:00pm,Scotland,SWPL 1,Spartans W,Hearts W,2.0,3.0,4.5,50,100,75,13.5,0.0,1.3,2.76,36.0,15.0,1.02,,1.2,,,
+Sep 20 2026 - 1:00pm,Switzerland,1. Liga Promotion,Bavois,Luzern II,1.67,1.0,3.04,42,71,71,10.67,0.0,1.07,1.88,1.7,4.0,3.5,1.06,1.22,1.26,1.14,1.93
+Sep 20 2026 - 1:00pm,France,Feminine Division 2,Grenoble Foot 38 W,Auxerre W,0.0,0.0,3.0,50,50,50,1.0,0.0,0.0,0.0,4.15,3.74,1.67,,1.8,,,
+Sep 20 2026 - 1:00pm,France,Feminine Division 2,Roubaix Wervicq W,Cannes W,0.0,1.0,1.0,50,50,0,3.0,0.0,0.0,0.0,3.03,4.1,1.94,,1.57,,,
+Sep 20 2026 - 1:00pm,Denmark,1st Division,Fredericia,Vejle,2.0,2.0,1.63,25,50,25,13.0,2.75,2.78,1.72,2.09,3.6,2.5,1.15,1.65,1.5,1.22,1.51
+Sep 20 2026 - 1:00pm,Switzerland,1. Liga Classic,Coffrane,Prishtina Bern,0.5,2.33,3.17,83,92,59,4.75,-1.83,0.0,1.47,3.91,3.98,1.66,,,,,
+Sep 20 2026 - 1:00pm,Spain,Primera Federación Femenina,Athletic Club II W,CD Tenerife II W,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,1.95,3.2,3.18,,2.05,,,
+Sep 20 2026 - 1:00pm,Italy,Serie B,Arezzo,Südtirol,0.0,1.0,3.5,100,100,50,10.0,2.0,1.67,0.94,2.2,3.2,3.35,1.37,2.46,1.91,1.35,1.62
+Sep 20 2026 - 1:00pm,Italy,Serie B,Hellas Verona,Vicenza,1.5,0.5,3.75,50,100,100,11.0,4.5,2.21,1.44,1.86,3.45,4.1,1.21,1.78,1.67,1.21,1.89
+Sep 20 2026 - 1:00pm,Italy,Serie C Group C,Inter II,Foggia,1.4,1.0,2.3,50,70,30,10.6,3.8,1.61,1.68,2.26,3.3,3.1,1.3,2.01,1.83,1.33,1.5
+Sep 20 2026 - 1:00pm,Belgium,Second Amateur Division : VFV B,Eendracht Termien,Sint-Truiden II,1.33,1.33,4.67,50,84,84,0.0,-2.0,0.0,0.0,1.53,4.15,4.69,,1.44,,,
+Sep 20 2026 - 1:00pm,Belgium,Second Amateur Division : VFV B,Diegem Sport,Bocholt VV,1.33,0.33,4.84,84,100,67,7.0,-1.0,0.0,1.25,1.71,4.2,3.51,,1.4,1.41,1.13,1.88
+Sep 20 2026 - 1:00pm,Italy,Serie D Group A,Celle Varazze,Ligorna,0.0,0.33,3.17,67,67,67,5.67,-1.0,0.0,1.74,3.7,3.3,2.12,1.26,1.86,1.62,1.78,1.22
+Sep 20 2026 - 1:00pm,Italy,Serie D Group A,AS Biellese 1902,Chisola,2.33,1.5,1.92,34,59,17,8.0,-0.83,1.42,1.18,2.05,2.9,3.15,1.41,2.35,2.0,1.26,1.68
+Sep 20 2026 - 1:00pm,Italy,Serie D Group A,Borgosesia,Bra,0.5,0.33,1.17,17,42,0,7.5,-1.33,0.0,1.36,2.9,3.1,2.2,1.28,2.0,1.76,1.25,1.25
+Sep 20 2026 - 1:00pm,Italy,Serie D Group A,Derthona,Millesimo,2.33,2.0,2.84,67,67,50,13.0,-1.0,1.52,1.84,2.39,3.0,2.9,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group C,Este,Cjarlins Muzane,1.0,2.0,2.83,34,50,34,9.0,-1.67,1.73,1.88,2.5,3.1,2.65,1.33,2.2,1.67,1.28,1.39
+Sep 20 2026 - 1:00pm,Italy,Serie D Group C,Brian Lignano,Clodiense,0.0,2.33,2.17,50,84,34,14.0,-1.67,1.38,1.66,3.2,3.0,2.2,,1.95,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group C,Legnago Salus,Calvi Noale,1.33,0.67,2.5,67,84,34,11.0,-2.0,1.37,1.08,1.81,3.35,3.95,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group C,Virtus Bolzano,Sandonà,1.0,2.33,2.5,50,84,50,13.0,-1.67,1.68,1.52,2.4,3.25,2.5,,2.1,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group C,Triestina,Bassano Virtus,0.67,0.67,1.67,67,67,33,0.0,-2.0,0.0,0.0,1.69,3.35,4.8,1.25,2.05,1.93,1.21,1.95
+Sep 20 2026 - 1:00pm,Italy,Serie D Group C,Mestre,Altavilla,1.67,0.67,1.83,50,67,17,5.5,-1.67,1.39,2.57,2.0,3.05,3.55,1.48,2.35,2.1,1.31,1.55
+Sep 20 2026 - 1:00pm,Italy,Serie D Group B,Villa Valle,Milan II,1.0,2.0,3.0,67,84,50,12.5,-1.67,1.28,1.83,,,,1.3,2.0,1.75,1.25,1.37
+Sep 20 2026 - 1:00pm,Italy,Serie D Group B,Piacenza,Real Calepina,1.33,1.67,2.67,67,67,50,8.5,-0.66,1.1,1.03,1.58,3.55,4.7,1.22,1.73,1.75,1.07,2.14
+Sep 20 2026 - 1:00pm,Italy,Serie D Group B,Club Milano,Virtus Verona,1.0,1.67,2.0,34,67,17,6.0,-1.0,1.28,0.57,2.4,2.95,2.85,1.36,2.2,1.91,1.11,1.36
+Sep 20 2026 - 1:00pm,Italy,Serie D Group B,Caldiero Terme,Scanzorosciate,0.67,1.33,3.17,67,84,67,13.0,-1.67,1.78,1.17,2.05,3.15,3.61,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group B,Brusaporto,Fiorenzuola,1.0,0.0,2.17,34,67,50,9.83,-1.34,1.63,0.69,1.8,3.3,3.75,1.3,2.1,1.86,1.22,1.78
+Sep 20 2026 - 1:00pm,Italy,Serie D Group E,Sasso Marconi,Prato,1.33,2.33,3.0,84,84,67,9.33,-0.67,1.62,1.62,3.8,3.2,1.85,1.32,2.04,1.85,1.3,1.22
+Sep 20 2026 - 1:00pm,Italy,Serie D Group E,San Donato Tavarnelle,Gavorrano,2.33,2.33,2.34,67,84,34,5.0,-2.0,1.4,1.34,2.2,2.85,3.1,1.38,2.41,2.01,1.13,1.5
+Sep 20 2026 - 1:00pm,Italy,Serie D Group E,Ternana,Tau Altopascio,0.33,2.0,3.17,84,84,67,6.83,-1.67,0.98,2.55,,,,1.28,1.93,1.74,1.24,1.58
+Sep 20 2026 - 1:00pm,Italy,Serie D Group E,Robur Siena,Montevarchi Calcio,1.33,1.33,3.33,84,100,67,5.0,-1.67,0.0,1.41,1.75,3.35,4.2,1.3,1.9,2.01,1.18,1.91
+Sep 20 2026 - 1:00pm,Italy,Serie D Group E,Grassina,Scandicci,0.33,1.33,2.17,50,84,34,5.5,-1.34,1.12,1.52,3.47,3.22,1.96,,2.1,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group E,Progresso,Seravezza,1.0,1.33,3.5,67,100,84,6.33,-2.0,1.42,1.57,3.15,3.2,2.13,1.37,2.17,1.91,1.58,1.23
+Sep 20 2026 - 1:00pm,Italy,Serie D Group F,Santegidiese SSD,Angelana,1.33,1.0,2.17,50,67,33,9.0,-1.67,1.03,1.2,2.27,3.1,3.0,,2.1,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group F,Recanatese,Montecchio Gallo,1.67,2.0,2.33,67,67,50,5.33,-1.33,1.39,1.46,2.05,3.2,3.0,,1.9,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group F,Teramo,Real Giulianova Ssd,2.33,0.33,2.5,50,67,67,13.0,-1.67,1.67,1.26,1.39,3.84,7.75,1.25,1.9,2.03,1.06,2.4
+Sep 20 2026 - 1:00pm,Italy,Serie D Group F,Ancona 1905,L'Aquila,2.0,2.33,1.67,17,33,33,10.67,-1.67,1.82,1.53,2.03,3.2,3.45,1.3,2.22,1.95,1.26,1.66
+Sep 20 2026 - 1:00pm,Italy,Serie D Group G,Monastir,Aranova,2.0,1.67,3.0,67,67,67,5.0,-1.67,1.57,1.57,1.71,3.6,4.2,,1.9,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group G,Afragolese,US Venafro,1.0,0.33,1.0,33,33,0,2.5,-1.33,1.06,0.0,1.62,3.3,5.0,,2.3,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group G,Latte Dolce,Città di Anagni,0.33,0.0,3.67,50,100,84,12.67,-1.67,1.49,1.85,1.78,3.4,3.75,1.18,1.8,1.69,1.21,1.83
+Sep 20 2026 - 1:00pm,Italy,Serie D Group G,Trastevere,Paganese,2.33,2.33,2.34,67,67,50,12.0,-1.34,1.89,1.98,2.5,3.1,2.55,1.28,1.97,1.7,1.4,1.38
+Sep 20 2026 - 1:00pm,Italy,Serie D Group H,USD Palmese,Aversa Normanna,1.33,1.33,2.34,50,67,50,8.0,-1.0,1.0,1.37,,,,1.34,2.15,1.87,1.35,1.62
+Sep 20 2026 - 1:00pm,Italy,Serie D Group H,Gladiator,Fidelis Andria,1.0,0.33,2.83,84,84,67,3.5,-1.33,0.0,1.1,3.07,3.1,2.33,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group H,Manfredonia,Ebolitana,0.67,1.33,2.84,100,100,67,12.0,-1.34,1.71,1.81,2.09,3.15,3.55,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group I,Vigor Lamezia,Reggina,0.67,3.0,3.33,50,84,67,9.5,-2.0,1.03,1.54,6.0,3.5,1.53,1.3,1.98,2.04,2.27,1.05
+Sep 20 2026 - 1:00pm,Italy,Serie D Group I,Vibonese,AC Palermo,1.33,1.33,4.0,67,100,67,6.5,-1.0,1.84,1.33,1.85,3.1,3.9,1.33,2.03,1.86,1.25,1.75
+Sep 20 2026 - 1:00pm,Italy,Serie D Group I,Modica,CastrumFavara,0.33,1.33,2.34,50,67,50,9.5,-1.67,1.78,2.51,2.48,3.25,2.75,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group I,Licata,Ragusa,0.67,0.67,3.17,84,100,50,6.0,-2.0,0.91,0.76,,,,1.36,1.89,1.86,1.37,1.4
+Sep 20 2026 - 1:00pm,Italy,Serie D Group I,Avola,Nissa,1.0,2.33,3.17,50,84,50,9.0,-2.0,1.17,1.87,,,,,1.61,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group D,Oltrepò,Coriano,1.33,0.33,2.0,67,67,33,8.67,-0.66,1.32,1.15,,,,1.33,2.15,1.97,1.22,1.89
+Sep 20 2026 - 1:00pm,Italy,Serie D Group D,Correggese,Casatese,1.67,1.33,2.17,84,84,50,11.0,-1.67,2.09,0.92,2.7,3.0,2.45,1.43,2.25,1.95,1.4,1.34
+Sep 20 2026 - 1:00pm,Italy,Serie D Group D,Crema,Pro Sesto,0.33,2.0,2.67,33,84,50,9.0,-1.67,0.84,1.23,3.9,3.0,1.91,1.37,2.18,1.95,1.33,1.2
+Sep 20 2026 - 1:00pm,Italy,Serie D Group D,Lentigione,Cittadella Vis Modena,3.0,1.33,2.5,50,50,50,12.5,-1.0,1.82,1.21,1.86,3.25,3.9,1.3,2.04,1.84,1.23,1.73
+Sep 20 2026 - 1:00pm,Italy,Serie D Group D,Varesina,Pistoiese,1.33,3.0,3.5,67,100,67,14.0,-2.0,1.77,2.67,5.5,3.9,1.55,,,,,
+Sep 20 2026 - 1:00pm,Italy,Serie D Group D,Pontedera,Città di Varese,0.0,0.67,2.67,50,84,50,8.33,-1.0,1.01,0.91,3.35,3.35,1.95,1.25,1.88,1.71,1.22,1.28
+Sep 20 2026 - 1:00pm,Turkey,3. Lig Group 1,İnkılapspor,Küçükçekmece Sinopspor,1.5,2.0,3.25,75,75,50,8.0,-1.5,1.32,1.16,,,,,2.07,,,
+Sep 20 2026 - 1:00pm,Turkey,3. Lig Group 1,Galata,Düzcespor,1.0,1.0,2.5,75,75,50,1.5,-1.5,0.75,0.0,2.35,3.2,2.8,1.34,2.14,1.83,1.26,1.46
+Sep 20 2026 - 1:00pm,Turkey,3. Lig Group 1,Yalova Yeşilovaspor,Gölcükspor,1.5,1.5,2.25,25,75,50,8.0,-1.5,1.26,0.0,1.77,3.3,3.68,1.32,2.07,1.85,1.25,1.91
+Sep 20 2026 - 1:00pm,Turkey,2 Lig Kirmizi,Kırklarelispor,Halide Edip Adıvar,3.0,2.0,1.25,25,25,25,5.0,1.5,0.0,1.82,2.5,2.9,2.8,1.32,2.07,1.78,1.28,1.47
+Sep 20 2026 - 1:00pm,Turkey,2 Lig Kirmizi,Kütahyaspor,24 Erzincanspor,1.5,1.0,4.5,100,100,100,9.0,1.0,1.56,0.0,2.15,3.5,2.7,1.13,1.57,1.44,1.34,1.54
+Sep 20 2026 - 1:00pm,Turkey,2 Lig Kirmizi,İnegölspor,Karacabey Birlikspor,0.5,1.0,2.75,100,100,50,6.0,0.5,1.69,0.0,1.82,3.55,3.66,1.18,1.66,1.58,1.22,1.72
+Sep 20 2026 - 1:00pm,Turkey,2 Lig Beyaz,Somaspor,Muş Menderesspor,2.0,2.0,5.5,75,100,100,0.0,-0.5,0.0,0.0,5.2,4.2,1.5,1.15,1.5,1.62,1.14,1.12
+Sep 20 2026 - 1:00pm,Poland,4 Liga Podlaska,Łomża II,Michałowo,2.0,1.67,4.0,59,92,75,8.67,-2.0,1.69,1.38,2.3,3.7,2.45,,,,,
+Sep 20 2026 - 1:00pm,Poland,4 Liga Wielkopolska,Warta Śrem,Astra Krotoszyn,1.14,1.14,4.93,93,100,79,5.0,-2.0,2.34,0.0,2.48,3.3,2.55,,,,,
+Sep 20 2026 - 1:00pm,Italy,Campionato Primavera 2,Avellino U19,Latina U19,3.0,1.5,3.5,75,100,75,4.0,-0.5,0.0,1.28,1.65,4.1,4.13,1.11,1.45,1.48,1.07,1.95
+Sep 20 2026 - 1:00pm,Portugal,Taça de Portugal,Cinfães,Leixões,3.0,0.0,0.5,0,0,0,1.0,0.0,0.0,0.0,5.92,4.0,1.48,1.18,1.69,1.8,1.16,1.03
+Sep 20 2026 - 1:00pm,Greece,Panelinio Protathlima,Seirines Grevenon W,Odysseas Glyfadas,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,2.15,3.8,2.78,,1.57,,,
+Sep 20 2026 - 1:00pm,Greece,Panelinio Protathlima,Asteras Tripolis W,Kifisia W,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,1.18,6.2,12.2,,,,,
+Sep 20 2026 - 1:00pm,Brazil,Copa Paulista,Linense,Grêmio Prudente,2.14,1.56,2.62,38,51,44,7.54,-0.47,1.58,1.35,2.15,3.0,3.1,1.36,2.18,1.86,1.31,1.53
+Sep 20 2026 - 1:00pm,Uruguay,Primera División,Albion,Juventud,1.21,1.14,2.52,59,65,50,8.82,6.29,1.25,1.4,2.6,3.35,2.55,1.3,2.02,1.78,1.38,1.44
+Sep 20 2026 - 1:00pm,International,COSAFA U20 Championship,Mozambique U20,Namibia U20,3.0,3.0,3.0,50,50,50,11.0,-2.0,3.29,2.58,2.11,3.15,3.15,,2.05,,,
+Sep 20 2026 - 1:30pm,Germany,Bundesliga,Bayer Leverkusen,RB Leipzig,3.0,0.0,4.0,50,100,100,18.0,2.0,2.43,2.24,1.95,4.2,3.25,1.06,1.33,1.33,1.26,1.86
+Sep 20 2026 - 1:30pm,Czech Republic,4. Liga Division F,Šumperk,Bospor Bohumín,1.17,3.0,4.0,67,92,75,12.83,-0.83,1.49,2.61,4.49,4.15,1.55,,,,,
+Sep 20 2026 - 1:30pm,Czech Republic,4. Liga Division E,Kozlovice,Brumov,3.0,1.0,4.67,67,67,67,12.67,0.67,1.64,1.23,1.28,5.2,8.0,1.1,1.33,1.67,1.07,3.4
+Sep 20 2026 - 1:30pm,Czech Republic,4. Liga Division E,Tatran Všechovice,Šternberk,3.0,1.0,4.0,33,84,67,10.83,1.33,1.82,1.8,1.33,4.8,7.0,1.08,1.31,1.53,1.09,2.92
+Sep 20 2026 - 1:30pm,Czech Republic,4. Liga Division D,Žďár nad Sázavou,Humpolec,0.67,0.33,2.0,50,67,17,8.83,0.0,1.22,0.64,1.57,3.97,4.8,,,,,
+Sep 20 2026 - 1:30pm,Czech Republic,4. Liga Division D,Velká Bíteš,Velké Meziříčí,2.0,0.33,3.67,34,84,67,7.0,0.0,1.19,0.92,1.61,3.6,4.6,1.15,1.57,1.53,1.16,2.1
+Sep 20 2026 - 1:30pm,Italy,Serie D Group H,Bisceglie,Nocerina,2.0,2.33,3.34,84,100,84,9.67,-1.0,1.67,1.92,2.7,3.05,2.36,,,,,
+Sep 20 2026 - 2:00pm,Brazil,Serie A,Grêmio,Palmeiras,1.85,1.86,2.75,63,74,56,10.65,5.02,1.54,1.42,3.95,3.64,1.9,1.29,1.88,1.77,1.25,1.16
+Sep 20 2026 - 2:00pm,Norway,2 Division Group 1,Bjarg,Træff,1.84,1.58,3.32,66,84,63,10.15,3.0,1.85,1.38,1.45,4.6,4.7,1.09,1.4,1.53,1.11,2.49
+Sep 20 2026 - 2:00pm,Norway,2 Division Group 1,Pors Grenland,Lysekloster,1.05,0.74,2.84,61,82,58,9.52,2.9,1.2,1.22,1.63,4.2,4.6,1.1,1.42,1.5,1.11,2.14
+Sep 20 2026 - 2:00pm,Norway,2 Division Group 1,Notodden,Arendal,1.68,1.37,2.58,45,76,53,10.22,3.21,1.57,1.43,1.96,3.45,3.7,1.18,1.68,1.6,1.19,1.72
+Sep 20 2026 - 2:00pm,Norway,2 Division Group 2,Ullensaker / Kisa II,Junkeren,0.53,1.32,3.79,64,90,74,8.37,2.95,1.49,1.45,2.8,3.8,2.05,1.03,1.24,1.25,1.22,1.39
+Sep 20 2026 - 2:00pm,Sweden,Ettan North,Karlberg,Stockholm Internazionale,1.27,2.18,3.11,48,87,62,10.36,2.23,1.59,1.74,6.2,4.4,1.43,1.15,1.61,1.78,2.63,1.04
+Sep 20 2026 - 2:00pm,Sweden,Ettan North,AFC Eskilstuna,Gefle,1.95,1.23,3.16,53,82,62,8.73,2.59,1.51,1.34,1.7,3.55,3.75,1.15,1.61,1.57,1.18,1.95
+Sep 20 2026 - 2:00pm,Sweden,Ettan South,Hässleholms IF,Trollhättan,1.91,1.41,3.16,62,91,55,8.5,2.5,1.21,1.67,2.1,3.4,2.8,1.15,1.57,1.5,1.33,1.67
+Sep 20 2026 - 2:00pm,Sweden,Division 2 Norra Gotaland,IF Karlstad II,Stenungsund,0.62,1.29,3.08,64,91,52,7.74,-1.43,1.17,1.32,2.75,3.7,2.25,,,,,
+Sep 20 2026 - 2:00pm,Brazil,Serie B,Ponte Preta,CRB,0.5,1.5,2.58,54,79,47,9.86,6.07,1.34,1.59,,,,1.15,1.57,1.91,3.25,1.07
+Sep 20 2026 - 2:00pm,Denmark,Superliga,Horsens,AGF,1.0,0.25,3.0,75,100,63,8.25,4.5,1.11,1.63,3.7,3.5,1.8,1.18,1.71,1.67,1.2,1.17
+Sep 20 2026 - 2:00pm,Belgium,First Division B,Lokeren-Temse,Excelsior Virton,1.5,3.0,2.75,50,50,50,12.5,2.0,2.04,1.68,1.97,3.5,3.5,1.17,1.5,1.47,1.2,1.79
+Sep 20 2026 - 2:00pm,Belgium,Pro League,Sint-Truiden,KVC Westerlo,1.33,1.0,3.67,33,100,84,11.67,3.34,2.07,1.67,1.7,4.2,4.2,1.09,1.4,1.44,1.14,2.05
+Sep 20 2026 - 2:00pm,Sweden,Division 2 Norrland,Täfteå,IFK Östersund,1.62,1.62,3.9,67,90,74,13.6,-1.9,1.95,1.64,2.45,3.6,2.4,1.11,1.36,1.35,1.2,1.5
+Sep 20 2026 - 2:00pm,Scotland,SWPL 2,Kilmarnock W,Livingston W,3.0,0.0,4.0,25,100,75,4.0,0.0,0.0,1.18,,,,,1.2,,,
+Sep 20 2026 - 2:00pm,Turkey,Süper Lig,BB Erzurumspor,Samsunspor,1.5,1.5,2.0,0,50,25,5.5,1.5,1.31,1.26,,,,1.28,1.95,1.75,1.3,1.44
+Sep 20 2026 - 2:00pm,Turkey,Süper Lig,Fenerbahçe,Eyüpspor,1.5,0.0,3.25,50,75,75,7.0,4.5,1.56,0.7,1.18,6.9,13.0,1.13,1.35,2.0,1.08,5.5
+Sep 20 2026 - 2:00pm,Turkey,1. Lig,Manisa BBSK,İstanbulspor,1.33,0.0,3.34,46,84,84,5.17,4.5,1.37,0.86,1.95,3.7,3.3,1.13,1.6,1.51,1.17,1.81
+Sep 20 2026 - 2:00pm,Turkey,1. Lig,Pendikspor,BB Bodrumspor,1.67,0.67,2.0,50,50,33,8.0,2.33,1.67,1.0,,,,1.35,2.0,1.85,1.2,1.74
+Sep 20 2026 - 2:00pm,Austria,Landesliga Kärnten,Landskron,Launsdorf,2.0,2.17,3.65,69,85,70,10.17,-1.83,2.19,1.44,2.16,3.52,2.67,,1.61,,,
+Sep 20 2026 - 2:00pm,Greece,Super League,Levadiakos,Olympiakos Piraeus,0.0,2.0,1.75,25,75,0,14.0,4.5,1.2,1.78,9.5,4.9,1.37,1.24,1.86,2.05,1.15,1.03
+Sep 20 2026 - 2:00pm,Spain,Primera Division RFEF Group 2,Algeciras CF,Águilas FC,0.0,1.33,3.33,67,84,67,10.0,6.67,1.51,1.23,2.15,2.8,3.2,1.47,2.49,2.05,1.32,1.52
+Sep 20 2026 - 2:00pm,Germany,Frauen Bundesliga,Freiburg Women,Bayer Leverkusen Women,3.0,3.0,2.25,25,75,50,16.0,3.5,2.62,1.99,4.14,3.92,1.64,1.09,1.44,1.53,2.0,1.18
+Sep 20 2026 - 2:00pm,Poland,3 Liga Group 4,Sokół Kolbuszowa Dolna,Wiślanie Jaśkowice,1.0,2.0,2.32,50,75,44,10.73,-1.26,1.34,1.65,3.0,3.4,2.05,1.21,1.7,1.61,1.25,1.33
+Sep 20 2026 - 2:00pm,Austria,Landesliga Vorarlberg,Nenzing,Egg,2.0,3.0,3.5,60,90,60,0.0,-2.0,0.0,0.0,3.8,3.85,1.74,,,,,
+Sep 20 2026 - 2:00pm,Austria,Landesliga Wien,FAC Wien,Dinamo Helfort,1.75,1.0,3.63,63,100,75,11.33,-1.25,1.37,1.59,2.5,3.4,2.27,,1.44,,,
+Sep 20 2026 - 2:00pm,Italy,Serie D Group F,Atletico Ascoli,Sporting Trestina,1.33,0.33,2.17,33,50,33,9.33,-1.67,2.89,1.42,1.7,3.55,4.2,1.3,1.98,1.9,1.09,1.93
+Sep 20 2026 - 2:00pm,Italy,Serie D Group G,Sarnese,Gelbison,2.33,1.33,2.0,67,67,50,8.0,-1.0,1.29,1.48,2.2,3.15,3.1,1.35,2.18,1.87,1.11,1.5
+Sep 20 2026 - 2:00pm,Italy,Serie D Group H,Brindisi,Turris Neapolis,1.0,1.67,2.67,50,50,50,13.5,-1.0,1.22,1.59,,,,1.3,2.04,1.78,1.48,1.36
+Sep 20 2026 - 2:00pm,Italy,Serie D Group I,Milazzo,Sambiase,2.0,2.33,2.34,50,67,50,9.5,-1.67,0.77,1.77,2.3,3.1,2.85,1.35,2.18,1.88,1.11,1.47
+Sep 20 2026 - 2:00pm,Poland,4 Liga Świętokrzyska,Orlęta Kielce,Rudki,2.71,1.71,3.0,50,71,64,14.0,-1.86,1.9,2.69,1.5,4.6,4.47,,1.3,,,
+Sep 20 2026 - 2:00pm,Poland,4 Liga Świętokrzyska,Arka Pawłów,Hetman Włoszczowa,2.57,0.57,3.86,57,79,64,8.0,-2.0,3.23,0.95,1.18,6.05,10.8,,,,,
+Sep 20 2026 - 2:00pm,Poland,4 Liga Lódzka,Polonia Piotrków Trybun.,Justynów,2.25,0.0,3.51,44,88,63,10.0,-0.88,1.68,0.91,1.1,6.9,14.0,,1.33,,,
+Sep 20 2026 - 2:00pm,Poland,4 Liga Mazowiecka,Broń Radom,Błonianka Błonie,1.0,1.43,3.0,58,72,64,0.0,-2.0,0.0,0.0,1.32,4.9,6.78,,1.4,,,
+Sep 20 2026 - 2:00pm,Poland,4 Liga Warminsko Mazurska,Zatoka Braniewo,Sokół Ostróda,0.57,1.71,3.57,57,86,72,10.0,-2.0,0.19,2.14,5.05,4.5,1.45,,1.3,,,
+Sep 20 2026 - 2:00pm,Spain,División De Honor Juvenil Group 4,Marbella U19,Real Betis U19,2.33,3.0,4.67,67,100,100,17.0,-2.0,2.44,2.77,11.5,6.45,1.19,,1.3,,,
+Sep 20 2026 - 2:00pm,Spain,División De Honor Juvenil Group 7,Académico Murcia U19,Cartagena FC U19,0.5,1.5,3.0,25,75,50,7.0,-2.0,0.0,0.46,,,,,1.7,,,
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Fátima,Vinhais,3.0,0.0,2.0,50,50,50,10.0,0.0,0.0,0.0,1.18,5.75,12.0,1.13,1.53,2.45,1.05,4.5
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Sintrense,AVS,3.0,0.0,2.0,50,50,50,3.0,0.0,0.0,0.0,4.8,3.75,1.57,1.21,1.75,1.75,1.21,1.17
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Ovarense,Os Marialvas,0.0,3.0,2.0,0,50,50,7.0,0.0,0.0,2.7,1.73,3.4,4.2,,1.8,,,
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Bragança,Celoricense,3.0,3.0,2.5,0,50,50,10.0,0.0,0.0,1.11,1.8,3.4,4.4,1.31,2.1,1.85,1.25,1.9
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Os Limianos,Aljustrelense,3.0,3.0,4.0,50,100,100,10.0,0.0,1.32,1.38,1.6,3.6,5.75,,1.9,,,
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Ponte da Barca,Amarante,1.0,0.0,0.0,0,0,0,4.0,0.0,0.0,0.0,12.0,6.25,1.22,1.19,1.65,2.7,1.14,1.02
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,FC Serpa,Louletano,3.0,3.0,1.5,0,50,0,14.0,0.0,0.0,2.02,4.1,3.25,1.91,1.34,1.95,1.83,1.27,1.22
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Oliveira Hospital,Juventude Évora,3.0,3.0,3.0,50,50,50,10.0,0.0,2.32,1.75,1.94,3.05,3.5,,2.2,,,
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Mortágua,Leça,1.0,0.0,0.0,0,0,0,3.0,0.0,0.0,0.0,4.6,3.4,1.65,1.28,2.0,1.91,1.22,1.14
+Sep 20 2026 - 2:00pm,Portugal,Taça de Portugal,Amora,UD da Serra,0.0,3.0,2.5,0,50,50,6.0,0.0,0.0,0.0,1.63,3.5,4.85,,2.1,,,
+Sep 20 2026 - 2:00pm,Brazil,Brasileiro Feminino A2,Vasco da Gama W,Itabirito W,2.8,2.4,3.38,38,85,68,11.05,-0.9,2.18,1.85,,,,,1.7,,,
+Sep 20 2026 - 2:00pm,England,FA Cup,Southall,Dorking Wanderers,3.0,0.0,1.5,50,50,50,0.0,-1.0,0.0,0.0,6.75,5.0,1.35,,1.4,,,
+Sep 20 2026 - 2:00pm,Uruguay,Segunda División,Tacuarembó,Huracán,1.09,1.39,2.11,48,72,28,8.67,-0.56,1.23,1.2,2.32,2.94,2.96,,2.2,,,
+Sep 20 2026 - 2:00pm,Greece,Super League 2,Asteras Tripolis II,Apollon Pontou,0.0,0.5,2.0,25,50,25,8.5,-0.5,1.1,1.1,2.08,3.1,3.6,1.42,2.36,2.05,1.3,1.71
+Sep 20 2026 - 2:00pm,Greece,Super League 2,Olympiakos Piraeus II,Marko,2.0,3.0,2.25,75,75,50,6.0,0.0,1.04,0.95,6.2,3.0,1.5,1.4,2.4,2.3,1.29,1.11
+Sep 20 2026 - 2:15pm,Spain,La Liga,Atlético Madrid,Real Madrid,2.33,2.0,3.17,50,84,67,14.0,5.0,2.22,2.24,3.25,3.7,2.05,1.12,1.5,1.5,1.31,1.3
+Sep 20 2026 - 2:15pm,Spain,Segunda División,Ceuta,Real Valladolid,0.0,0.33,1.84,17,84,0,11.67,6.33,1.86,1.32,2.8,3.3,2.43,1.27,2.03,1.8,1.31,1.4
+Sep 20 2026 - 2:30pm,Sweden,Allsvenskan,Mjällby,GAIS,1.0,0.8,2.55,40,80,40,10.2,4.9,1.64,1.55,2.75,3.6,2.47,1.18,1.74,1.6,1.51,1.4
+Sep 20 2026 - 2:30pm,Sweden,Allsvenskan,Degerfors,Hammarby,1.1,1.2,2.65,50,80,45,11.6,2.9,1.28,2.27,8.0,5.6,1.32,1.13,1.51,1.85,3.4,1.07
+Sep 20 2026 - 2:30pm,Switzerland,Super League,Lausanne Sport,Lugano,0.5,3.0,3.5,88,88,75,11.5,4.67,1.35,1.6,,,,1.18,1.62,1.57,1.9,1.25
+Sep 20 2026 - 2:30pm,Switzerland,Super League,Basel,St. Gallen,0.75,1.5,3.5,63,88,63,12.25,3.75,1.23,2.16,2.32,3.82,2.3,1.12,1.4,1.33,1.53,1.52
+Sep 20 2026 - 2:30pm,Czech Republic,FNL,Vlašim,Táborsko,2.33,2.0,2.75,75,75,63,7.92,3.42,1.02,1.08,,,,1.19,1.8,1.62,1.24,1.42
+Sep 20 2026 - 2:30pm,Portugal,Liga NOS,Estrela Amadora,Academico Viseu,1.67,1.67,3.34,84,84,84,7.67,6.33,1.12,0.95,2.22,3.35,3.45,1.29,2.04,1.8,1.31,1.7
+Sep 20 2026 - 2:30pm,Portugal,Liga NOS,Vitória Guimarães,Moreirense FC,1.33,1.0,1.67,17,34,34,10.34,5.67,2.49,0.72,1.53,4.22,6.4,1.29,1.88,2.05,1.24,2.57
+Sep 20 2026 - 2:30pm,Czech Republic,4. Liga Division B,Sokol Hostouň,Slovan Velvary,3.0,2.0,5.34,75,100,100,13.83,0.0,3.18,1.36,1.27,4.8,8.1,,1.44,,,
+Sep 20 2026 - 2:30pm,Italy,Serie D Group H,Martina Franca,Virtus Francavilla,2.0,3.0,3.34,67,84,67,13.5,-0.66,1.7,1.96,2.25,3.1,3.15,,,,,
+Sep 20 2026 - 2:30pm,Spain,Segunda Federación Femenina,Arratia W,Bizkerre W,1.5,1.5,3.0,25,50,50,3.0,-2.0,1.05,0.0,,,,,1.85,,,
+Sep 20 2026 - 2:30pm,Spain,División De Honor Juvenil Group 7,Kelme U19,San Francisco U19,0.5,3.0,1.25,0,50,0,4.5,-2.0,0.0,1.15,3.4,3.1,2.04,,2.1,,,
+Sep 20 2026 - 2:30pm,Spain,Tercera Group 7,Galapagar,Las Rozas,2.0,3.0,4.5,100,100,75,5.0,0.0,1.59,1.31,2.85,3.1,2.15,1.26,1.95,1.7,1.25,1.25
+Sep 20 2026 - 2:45pm,Netherlands,Eredivisie,NEC,Go Ahead Eagles,0.33,0.67,4.67,100,100,100,10.33,1.66,1.87,1.38,2.08,3.9,3.16,1.07,1.36,1.35,1.36,1.73
+Sep 20 2026 - 2:45pm,Netherlands,Eerste Divisie,De Graafschap,NAC Breda,0.0,1.33,5.17,100,100,100,12.67,5.67,2.12,1.99,2.85,4.1,2.0,1.05,1.3,1.33,1.21,1.3
+Sep 20 2026 - 2:45pm,Spain,Segunda División RFEF Group 1,Rayo Cantabria,SD Amorebieta,0.5,0.5,2.0,50,50,25,8.0,0.0,1.22,1.52,,,,,1.95,,,
+Sep 20 2026 - 3:00pm,Norway,Eliteserien,Viking,Lillestrøm,3.0,1.7,3.6,54,90,65,12.37,3.68,2.09,1.42,1.39,5.1,5.9,1.05,1.29,1.4,1.11,2.82
+Sep 20 2026 - 3:00pm,Norway,Eliteserien,Tromsø,HamKam,2.1,0.6,2.85,35,85,60,10.2,2.6,1.87,1.17,1.48,4.0,5.7,1.14,1.62,1.7,1.2,2.5
+Sep 20 2026 - 3:00pm,Norway,Eliteserien,Sandefjord,Start,1.1,0.4,2.65,50,80,45,9.1,4.8,1.51,1.42,1.95,3.58,3.5,1.15,1.61,1.5,1.3,1.73
+Sep 20 2026 - 3:00pm,Norway,First Division,Sandnes Ulf,Moss,1.27,1.09,3.77,69,91,73,11.19,3.64,1.59,1.6,2.13,3.7,2.9,1.15,1.43,1.41,1.35,1.67
+Sep 20 2026 - 3:00pm,Norway,First Division,Odd,Egersund,1.64,0.8,3.45,63,87,72,10.47,3.72,1.8,1.31,1.75,4.2,3.9,1.07,1.32,1.37,1.2,2.02
+Sep 20 2026 - 3:00pm,Norway,First Division,Kongsvinger,Hødd,2.36,1.09,4.45,78,87,82,9.36,2.91,2.0,1.1,1.24,5.8,7.2,1.02,1.23,1.45,1.04,4.0
+Sep 20 2026 - 3:00pm,Norway,First Division,Lyn,Ranheim,1.18,0.7,4.4,68,96,82,11.39,2.94,1.52,1.34,1.67,4.6,3.55,1.01,1.17,1.25,1.2,2.09
+Sep 20 2026 - 3:00pm,Norway,First Division,Haugesund,Strømmen,2.5,1.0,4.01,67,91,67,11.35,3.04,2.07,1.41,1.3,6.0,7.4,1.03,1.22,1.45,1.1,3.18
+Sep 20 2026 - 3:00pm,Norway,First Division,Raufoss,Strømsgodset,1.18,1.73,3.59,64,91,64,14.09,2.91,1.34,1.95,7.75,6.0,1.29,1.04,1.24,1.53,3.4,1.05
+Sep 20 2026 - 3:00pm,Norway,First Division,Stabæk,Sogndal,2.4,0.55,4.25,62,100,81,14.64,2.46,2.04,1.57,1.37,5.2,5.4,1.02,1.24,1.35,1.13,3.0
+Sep 20 2026 - 3:00pm,Norway,2 Division Group 2,Skeid,Tromsdalen,0.89,1.37,3.32,56,82,58,9.54,3.42,1.12,1.53,2.45,3.5,2.35,1.08,1.43,1.36,1.19,1.41
+Sep 20 2026 - 3:00pm,Sweden,Division 2 Norra Gotaland,Lidköping,Vänersborgs IF,1.0,0.43,3.36,57,81,72,9.26,-1.62,1.06,1.32,1.73,3.7,3.92,,1.5,1.5,1.18,2.15
+Sep 20 2026 - 3:00pm,Sweden,Division 2 Sodra Svealand,Syrianska,Sleipner,0.95,2.05,3.74,69,86,74,8.39,-1.24,1.32,1.39,3.75,3.95,1.8,1.12,1.42,1.44,1.17,1.22
+Sep 20 2026 - 3:00pm,Austria,Bundesliga,Salzburg,Sturm Graz,3.0,1.33,3.34,67,84,50,15.66,3.66,2.31,1.95,1.61,4.0,4.5,1.12,1.33,1.4,1.17,2.3
+Sep 20 2026 - 3:00pm,Greece,Super League,Volos NFC,AEK Athens,1.0,1.0,2.0,100,100,0,4.5,6.0,1.2,1.59,7.95,4.8,1.32,1.19,1.71,2.02,3.1,1.04
+Sep 20 2026 - 3:00pm,Portugal,Campeonato Nacional Feminino,Racing Seixal,Valadares Gaia W,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,2.72,3.08,2.33,,2.2,,,
+Sep 20 2026 - 3:00pm,Italy,Serie D Group E,Rondinella Marzocco,Lucchese,0.33,2.0,3.33,33,84,84,10.0,-1.0,1.78,1.93,4.3,3.45,1.7,,2.0,,,
+Sep 20 2026 - 3:00pm,Spain,Tercera Group 11,Porreres,Inter Ibiza,1.5,0.0,3.25,25,100,50,13.0,-2.0,0.0,0.73,1.44,3.9,5.75,1.18,1.69,1.84,1.22,2.52
+Sep 20 2026 - 3:00pm,Spain,Segunda División RFEF Group 1,SD Compostela,Sestao River Club,0.5,3.0,1.5,0,50,25,13.5,0.0,1.27,1.34,2.4,2.9,2.88,,2.62,,,
+Sep 20 2026 - 3:00pm,Spain,Segunda División RFEF Group 1,Gernika Club,Llanera,2.0,0.0,3.5,75,100,100,9.0,-0.5,1.45,1.37,1.85,3.1,3.8,,2.1,,,
+Sep 20 2026 - 3:00pm,Spain,Segunda División RFEF Group 2,Arnedo,Terrassa FC,0.0,2.0,2.75,50,50,50,8.5,-0.5,0.83,1.72,4.33,3.48,1.66,,2.07,,,
+Sep 20 2026 - 3:00pm,Spain,Segunda División RFEF Group 2,SD Logroñés,Girona II,0.5,1.5,4.0,100,100,75,8.5,0.0,1.43,1.3,2.38,2.9,2.95,,2.37,,,
+Sep 20 2026 - 3:00pm,Poland,4 Liga Małopolska,Cracovia Kraków II,Glinik Gorlice,2.75,2.0,4.13,38,82,69,18.5,-1.88,3.07,2.28,,,,,1.44,,,
+Sep 20 2026 - 3:00pm,Spain,Tercera Group 2,Ceares,Colunga,1.5,3.0,3.0,100,100,100,4.5,-1.0,0.68,1.57,1.95,2.9,3.65,,2.0,,,
+Sep 20 2026 - 3:00pm,Spain,Segunda División RFEF Group 5,Atlético Tordesillas,CDA Navalcarnero,0.0,1.5,3.75,75,75,75,2.5,-0.5,0.92,1.14,2.7,3.0,2.45,,2.35,,,
+Sep 20 2026 - 3:00pm,Portugal,Taça de Portugal,Paredes,Maria da Fonte,3.0,3.0,2.5,50,50,50,18.0,0.0,1.99,1.22,1.21,5.1,13.0,1.18,1.63,2.51,1.07,3.95
+Sep 20 2026 - 3:10pm,Scotland,SWPL 1,Rangers W,Aberdeen,3.0,0.0,6.0,25,100,100,10.0,0.0,0.0,0.25,1.0,100.0,151.0,,1.04,,,
+Sep 20 2026 - 3:15pm,France,Ligue 1,Nice,Lille,1.0,3.0,1.25,25,50,0,9.5,2.5,1.17,1.39,3.65,3.5,2.05,1.29,1.84,1.73,1.81,1.3
+Sep 20 2026 - 3:15pm,Italy,Serie B,Mantova,Pisa,3.0,3.0,3.0,25,100,75,7.0,3.5,1.54,1.44,2.7,3.35,2.65,1.24,1.95,1.7,1.43,1.4
+Sep 20 2026 - 3:30pm,Poland,Ekstraklasa,Jagiellonia Białystok,Legia Warszawa,2.0,2.0,2.25,54,71,29,8.0,3.17,1.63,1.56,2.6,3.3,2.3,1.23,1.71,1.57,1.29,1.44
+Sep 20 2026 - 3:30pm,England,Premier League,Fulham,Manchester United,0.0,0.5,4.0,75,100,75,11.0,3.0,2.17,1.85,3.4,3.7,2.0,1.12,1.52,1.44,1.2,1.25
+Sep 20 2026 - 3:30pm,Germany,Bundesliga,Schalke 04,Elversberg,1.0,3.0,3.5,50,50,50,4.0,3.0,0.48,1.82,2.03,3.85,2.82,1.13,1.53,1.44,1.33,1.73
+Sep 20 2026 - 3:30pm,Poland,1. Liga,Podbeskidzie,Unia Skierniewice,1.0,1.0,3.0,84,84,59,8.33,4.83,1.17,1.21,2.05,3.5,3.05,1.15,1.62,1.52,1.22,1.63
+Sep 20 2026 - 3:30pm,Italy,Serie C Group C,Potenza Calcio,Cavese,2.0,1.0,2.9,60,70,60,9.4,4.6,2.02,1.58,1.95,3.4,3.4,1.26,1.87,1.75,1.22,1.77
+Sep 20 2026 - 3:30pm,Italy,Serie C Group A,Arzignano Valchiampo,Renate,1.4,0.4,2.3,60,60,60,12.0,2.6,1.54,1.58,2.45,2.95,2.62,1.29,1.98,1.74,1.32,1.44
+Sep 20 2026 - 3:30pm,Italy,Serie C Group B,Città di Campobasso,Pineto,1.4,1.2,2.2,50,60,40,10.8,5.4,1.62,1.69,1.82,3.2,3.48,1.31,2.04,1.78,1.22,1.67
+Sep 20 2026 - 3:30pm,Spain,Tercera Group 13,Águilas II,Bala Azul,1.0,2.0,2.75,75,75,50,6.5,1.0,1.48,1.06,2.45,3.2,2.55,1.31,2.04,1.8,1.24,1.57
+Sep 20 2026 - 3:30pm,Spain,Segunda División RFEF Group 2,UD Barbastro,Barcelona II,2.0,2.0,3.0,25,50,50,11.5,0.0,1.56,1.84,4.2,3.5,1.73,,1.95,,,
+Sep 20 2026 - 3:30pm,Spain,Tercera Group 6,Soneja,Utiel,0.5,1.0,2.25,50,75,50,4.0,-2.0,1.07,0.48,2.4,2.88,2.9,,2.35,,,
+Sep 20 2026 - 3:30pm,Spain,Tercera Group 8,Mirandés II,Cultural Leonesa II,0.5,3.0,1.75,25,75,0,9.5,-1.0,1.14,1.51,2.4,2.75,2.86,,2.35,,,
+Sep 20 2026 - 3:30pm,Spain,Segunda División RFEF Group 5,Real Ávila,Calvo Sotelo,0.0,0.5,2.25,50,75,75,11.0,0.0,1.68,1.21,1.68,3.4,4.33,1.25,1.88,1.85,1.1,2.03
+Sep 20 2026 - 3:45pm,Saudi Arabia,First Division,Dhamk,Al Adalh,0.5,2.0,1.0,25,25,0,5.5,3.0,1.01,1.19,1.73,3.5,4.3,1.22,1.8,1.75,1.29,1.96
+Sep 20 2026 - 3:55pm,Saudi Arabia,First Division,Al-Jndal,Al Wahda,2.0,1.0,1.75,50,50,25,6.5,2.5,1.49,1.35,3.9,3.6,1.82,,1.7,,,
+Sep 20 2026 - 3:55pm,Saudi Arabia,First Division,Al Jabalain,Al Orubah,2.0,1.0,1.25,25,25,25,11.5,4.0,1.96,0.93,1.7,3.6,4.5,1.29,1.91,1.82,1.12,1.94
+Sep 20 2026 - 4:00pm,Norway,2 Division Group 2,Trygg/Lade,Levanger,0.47,2.21,3.69,69,89,82,10.43,1.94,1.44,1.81,6.5,5.0,1.33,1.09,1.4,1.67,1.08,1.06
+Sep 20 2026 - 4:00pm,Italy,Serie A,Juventus,Atalanta,2.0,0.0,2.5,75,100,50,9.5,4.5,1.78,0.66,1.7,3.8,4.75,1.26,1.9,1.81,1.29,2.05
+Sep 20 2026 - 4:00pm,Denmark,Superliga,Viborg,Nordsjælland,2.25,1.25,2.63,38,88,50,9.5,2.0,1.36,1.81,2.7,3.5,2.34,1.12,1.56,1.44,1.62,1.4
+Sep 20 2026 - 4:00pm,Czech Republic,First League,Slavia Praha,Viktoria Plzeň,2.5,1.67,4.29,54,84,84,8.25,5.17,2.35,1.72,1.62,3.85,4.6,1.18,1.64,1.7,1.1,2.38
+Sep 20 2026 - 4:00pm,Spain,Primera Federación Femenina,Real Madrid II W,Alhama,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,3.0,3.4,2.0,,1.72,,,
+Sep 20 2026 - 4:00pm,Greece,Super League,OFI,Asteras Tripolis,3.0,0.0,3.0,50,100,50,6.0,1.5,0.81,1.72,2.2,3.1,3.3,1.38,2.25,1.85,1.33,1.6
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 13,Santomera,CD Algar,2.0,0.0,3.0,50,100,75,7.5,0.0,1.38,0.88,1.42,4.0,6.8,1.24,1.85,1.99,1.02,2.8
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 13,Alcantarilla,Cotillas,1.0,2.0,2.25,75,75,50,7.5,1.5,0.8,0.68,2.44,3.15,2.65,1.28,2.05,1.75,1.25,1.42
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 11,Cardassar,CE Constància,2.0,2.0,2.25,50,75,50,11.0,-2.0,2.18,1.17,3.5,3.0,2.05,,2.05,,,
+Sep 20 2026 - 4:00pm,Spain,Segunda División RFEF Group 2,CD Tudelano,Manresa,0.5,3.0,2.75,50,75,50,4.0,-1.5,0.0,0.0,,,,,2.1,,,
+Sep 20 2026 - 4:00pm,Turkey,3. Lig Group 2,Gaziemir Gençlikspor,Denizli İY Güreller,0.0,0.5,2.25,25,100,25,0.0,-2.0,0.0,0.0,2.7,3.3,2.3,,2.05,,,
+Sep 20 2026 - 4:00pm,Turkey,3. Lig Group 2,Altay,Nilüfer Belediye,1.0,3.0,2.25,50,75,25,2.0,-1.5,0.61,0.0,,,,,2.0,,1.26,1.53
+Sep 20 2026 - 4:00pm,Turkey,2 Lig Kirmizi,Fethiyespor,12 Bingölspor,0.0,2.0,3.0,50,75,75,9.0,0.5,0.96,1.05,2.6,2.9,2.5,,1.8,,,
+Sep 20 2026 - 4:00pm,Turkey,2 Lig Beyaz,Isparta Davrazspor,Gebzespor,0.0,3.0,2.0,25,75,25,4.0,0.5,0.94,0.0,3.2,3.35,2.1,,1.8,,,
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 6,Vall de Uxó,Jove Español,2.0,0.5,2.5,25,75,50,6.0,-2.0,1.3,0.97,1.8,2.9,4.69,,,,,
+Sep 20 2026 - 4:00pm,Spain,División De Honor Juvenil Group 3,Sant Andreu U19,Valle de Aranguren U19,0.5,1.5,3.5,50,100,100,1.0,-2.0,0.0,0.0,2.95,4.3,1.98,,1.44,,,
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 1,Gran Pena,Antela,1.5,1.5,2.25,50,75,50,5.5,-1.0,1.41,0.0,1.75,3.45,4.2,,2.0,,,
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 1,Barco,Portonovo,1.5,2.0,1.75,50,50,50,8.5,-1.5,1.39,0.0,2.04,3.1,3.15,,2.2,,,
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 2,L'Entregu,Langreo,1.5,0.5,2.25,50,50,50,6.5,-0.5,1.11,1.91,3.25,3.2,2.09,1.28,1.97,1.76,1.67,1.25
+Sep 20 2026 - 4:00pm,Spain,Segunda División RFEF Group 3,Yeclano Deportivo,La Nucía,2.0,3.0,2.5,50,50,25,9.0,0.0,0.98,1.92,2.15,2.87,3.25,,2.5,,,
+Sep 20 2026 - 4:00pm,Spain,Segunda División RFEF Group 4,CD Badajoz,Real Betis II,3.0,2.0,1.75,50,50,50,8.5,-1.0,1.39,0.89,2.5,3.2,2.4,,2.05,,,
+Sep 20 2026 - 4:00pm,Spain,Segunda División RFEF Group 4,Marbella FC,Atlético Central,0.5,1.5,3.25,50,100,75,6.0,-2.0,1.36,0.93,,,,,2.15,,,
+Sep 20 2026 - 4:00pm,Spain,Tercera Group 3,Sámano,Guarnizo,0.5,0.0,2.75,75,75,75,7.0,-2.0,1.38,0.0,2.39,3.0,2.65,1.26,1.95,1.7,1.25,1.44
+Sep 20 2026 - 4:00pm,Portugal,Taça de Portugal,AD Marco 09,Maia Lidador,3.0,1.0,0.5,0,0,0,14.0,0.0,2.07,0.0,1.3,4.3,8.46,1.25,1.84,2.34,1.02,3.4
+Sep 20 2026 - 4:00pm,Uruguay,Primera División,Danubio,Wanderers,0.89,1.48,2.37,49,70,44,9.12,5.33,1.3,1.36,2.2,3.2,3.4,1.39,2.17,1.89,1.26,1.56
+Sep 20 2026 - 4:15pm,Spain,Primera Division RFEF Group 1,Zamora CF,CD Lugo,1.33,2.33,2.17,67,67,50,9.0,3.0,1.46,1.39,2.1,3.1,3.3,1.38,2.24,1.95,1.28,1.62
+Sep 20 2026 - 4:15pm,Spain,Tercera Group 3,Selaya,Atlético Albericia,0.5,0.0,2.0,25,75,50,2.5,-1.0,0.76,0.0,3.4,3.2,2.03,1.28,2.0,1.76,1.25,1.29
+Sep 20 2026 - 4:30pm,Belgium,Pro League,Club Brugge,KRC Genk,3.0,0.67,3.17,50,67,67,11.0,3.66,2.16,1.24,1.4,4.75,5.55,1.06,1.35,1.48,1.14,2.5
+Sep 20 2026 - 4:30pm,Spain,La Liga,Deportivo La Coruña,Real Betis,1.33,2.0,3.0,67,67,50,8.34,3.0,1.01,2.14,3.6,3.6,2.0,1.26,1.81,1.57,1.23,1.33
+Sep 20 2026 - 4:30pm,Spain,La Liga,Villarreal,Levante UD,0.0,0.67,2.5,50,67,67,10.0,2.5,1.99,0.89,1.5,4.9,5.75,1.08,1.44,1.57,1.2,2.63
+Sep 20 2026 - 4:30pm,Spain,Segunda División,UD Las Palmas,Burgos CF,2.0,0.5,1.0,25,25,25,8.0,5.0,0.9,1.09,1.93,3.1,3.8,1.31,2.21,1.85,1.25,1.84
+Sep 20 2026 - 4:30pm,Spain,Segunda División,Almería,Celta de Vigo II,3.0,2.0,2.5,25,75,50,8.0,5.5,1.72,1.24,1.44,4.2,5.5,1.13,1.64,1.75,1.08,2.75
+Sep 20 2026 - 4:30pm,Greece,Super League,Kalamata,Panathinaikos,1.5,3.0,3.25,50,100,50,8.5,7.5,1.26,1.7,7.5,4.5,1.33,1.25,1.82,2.06,3.22,1.04
+Sep 20 2026 - 4:30pm,Germany,Frauen Bundesliga,Union Berlin Women,RB Leipzig W,0.0,0.5,2.5,50,75,25,7.5,5.0,1.2,1.84,2.17,3.48,2.78,1.14,1.56,1.4,1.22,1.8
+Sep 20 2026 - 4:30pm,Spain,Segunda División RFEF Group 2,Osasuna II,CD Ebro,3.0,2.0,3.0,50,75,50,7.0,0.0,0.89,1.37,2.14,3.0,3.45,,2.3,,,
+Sep 20 2026 - 4:30pm,Spain,Tercera Group 5,Vilassar Mar,CF Badalona,1.5,0.0,2.0,50,50,50,8.0,1.0,1.27,1.63,,,,,2.25,,,
+Sep 20 2026 - 4:30pm,Spain,Tercera Group 6,Atlético Saguntino,Villarreal III,1.5,3.0,2.5,50,75,75,2.0,-2.0,0.66,1.37,2.5,2.85,2.68,,2.1,,,
+Sep 20 2026 - 4:30pm,Spain,Tercera Group 8,Cristo Atlético,CD Guijuelo,0.5,1.5,2.25,50,75,25,9.0,-2.0,1.23,0.0,2.5,2.75,2.8,,2.25,,,
+Sep 20 2026 - 4:30pm,Spain,Tercera Group 1,Alondras,Sarriana,1.5,3.0,4.0,50,100,50,7.0,-2.0,0.0,1.34,2.75,3.0,2.37,1.31,2.04,1.78,1.45,1.31
+Sep 20 2026 - 4:45pm,Spain,Primera Division RFEF Group 1,CP Cacereño,Arenas de Getxo,2.33,0.33,2.33,67,67,34,10.33,3.0,1.03,1.67,1.97,3.35,3.75,1.31,2.06,1.87,1.25,1.75
+Sep 20 2026 - 5:00pm,Portugal,Liga NOS,GD Estoril Praia,Casa Pia,0.67,0.33,1.17,17,50,0,11.67,3.67,1.77,1.14,1.75,3.75,4.5,1.29,1.91,1.75,1.2,2.03
+Sep 20 2026 - 5:00pm,Portugal,Liga NOS,Santa Clara,Sporting Braga,2.33,1.33,3.17,67,84,84,8.66,3.66,1.65,1.56,3.6,3.2,2.1,1.48,2.45,2.05,1.3,1.22
+Sep 20 2026 - 5:00pm,Turkey,Süper Lig,Göztepe,Rizespor,0.0,3.0,2.75,42,59,42,10.0,6.67,1.98,1.28,2.37,3.5,2.95,1.19,1.79,1.57,1.4,1.57
+Sep 20 2026 - 5:00pm,Turkey,Süper Lig,Amed,Beşiktaş,3.0,1.5,2.84,42,75,75,10.0,3.83,1.75,1.69,4.0,3.9,1.8,1.15,1.57,1.53,1.27,1.22
+Sep 20 2026 - 5:00pm,Turkey,1. Lig,Mardin BB,Kayserispor,2.33,2.5,1.84,29,71,13,10.58,6.5,1.8,1.34,,,,1.28,1.94,1.73,1.4,1.44
+Sep 20 2026 - 5:00pm,Turkey,1. Lig,Antalyaspor,Van BB,0.75,0.67,4.09,100,100,84,10.08,5.75,1.3,1.26,1.53,4.0,5.15,1.23,1.72,1.71,1.15,2.25
+Sep 20 2026 - 5:00pm,Saudi Arabia,First Division,Al Jeel,Hajer,0.5,2.0,1.75,25,50,25,9.5,2.5,1.36,1.33,2.6,3.0,2.5,1.4,2.29,1.87,1.4,1.36
+Sep 20 2026 - 5:00pm,Spain,Tercera Group 18,Quintanar del Rey,Illescas,0.5,2.0,2.25,50,50,25,1.0,-1.5,0.89,0.0,,,,1.4,2.36,1.92,1.33,1.44
+Sep 20 2026 - 5:00pm,Spain,Tercera Group 13,Olímpico Totana,Unión Molinense,0.5,2.0,4.25,100,100,100,11.5,0.0,1.05,1.97,2.42,3.1,2.84,,2.05,,,
+Sep 20 2026 - 5:00pm,Spain,Segunda División RFEF Group 2,Reddis,Náxara CD,0.0,0.0,2.75,25,75,50,9.0,0.0,1.28,1.04,1.59,3.5,5.0,,2.1,,,
+Sep 20 2026 - 5:00pm,Spain,División De Honor Juvenil Group 4,Utrera U19,Cádiz U19,0.0,2.0,3.83,33,100,84,8.0,-2.0,0.72,1.64,6.02,4.7,1.37,,1.44,,,
+Sep 20 2026 - 5:00pm,Spain,Segunda División RFEF Group 4,Xerez CD,CD Don Benito,0.5,3.0,2.25,50,75,75,9.0,-1.0,3.08,1.2,1.8,3.3,4.5,,2.25,,,
+Sep 20 2026 - 5:00pm,Spain,Segunda División RFEF Group 4,Antoniano,Mijas Las Lagunas,0.5,0.5,2.25,50,75,50,7.0,-1.5,1.29,1.48,1.56,3.65,5.0,,2.1,,,
+Sep 20 2026 - 5:00pm,Spain,Tercera Group 9,Atlético Porcuna,Granada II,1.5,2.0,3.0,25,50,50,10.0,-1.0,0.51,0.62,2.88,3.15,2.15,,2.05,,,
+Sep 20 2026 - 5:00pm,Uruguay,Segunda División,Cerrito,River Plate,1.43,1.25,2.59,53,68,47,10.61,-0.3,1.39,1.36,2.68,2.93,2.42,,2.15,,,
+Sep 20 2026 - 5:15pm,Norway,Eliteserien,Brann,FK Bodo - Glimt,1.5,2.3,3.25,65,95,80,13.2,1.8,2.09,1.88,4.15,4.5,1.63,1.04,1.27,1.36,1.14,1.2
+Sep 20 2026 - 5:15pm,Belgium,First Division B,FCV Dender EH,Patro Eisden,3.0,0.0,3.25,50,100,50,8.5,3.5,1.52,1.32,1.73,3.4,3.75,1.25,1.93,1.75,1.2,1.87
+Sep 20 2026 - 5:15pm,Belgium,Pro League,KV Kortrijk,Waasland-Beveren,0.0,0.0,3.34,33,100,84,11.0,5.34,1.27,1.34,,,,1.17,1.65,1.55,1.47,1.44
+Sep 20 2026 - 5:15pm,Spain,Tercera Group 18,Marchamalo,Guadalajara II,3.0,0.0,1.5,0,50,0,9.0,-1.0,1.51,1.16,1.89,3.16,3.75,,2.15,,,
+Sep 20 2026 - 5:30pm,Germany,Bundesliga,Paderborn,Hoffenheim,0.0,0.0,3.0,50,50,50,12.0,5.0,1.46,1.72,4.33,4.2,1.7,1.1,1.44,1.44,2.2,1.15
+Sep 20 2026 - 5:30pm,Poland,2. Liga,Tychy 71,Sandecja Nowy Sącz,2.33,1.5,2.25,29,71,54,11.17,1.0,1.57,2.13,2.05,3.25,3.19,1.23,1.85,1.65,1.24,1.6
+Sep 20 2026 - 5:30pm,Italy,Serie B,Modena,Empoli,0.0,1.5,1.75,25,25,25,18.5,7.0,4.01,1.17,1.7,3.6,5.25,1.22,1.81,1.81,1.25,2.12
+Sep 20 2026 - 5:45pm,Argentina,Primera División,San Lorenzo,Boca Juniors,1.31,1.69,1.95,43,56,27,9.08,4.5,1.27,1.59,3.7,3.2,2.1,1.52,2.43,2.15,1.74,1.25
+Sep 20 2026 - 5:45pm,Brazil,Carioca B2,Búzios,Serra Macaense,0.0,0.33,3.0,50,84,84,5.0,0.0,1.14,0.61,4.9,3.84,1.52,,1.75,,,
+Sep 20 2026 - 5:45pm,Brazil,Carioca B2,SE Belford Roxo,Cardoso Moreira,1.67,3.0,2.17,17,50,50,9.0,-1.0,1.72,1.24,2.35,3.2,2.6,,1.98,,,
+Sep 20 2026 - 5:45pm,Brazil,Carioca B2,Paduano,Barra Mansa,2.0,0.67,2.34,50,50,50,3.67,-0.67,0.0,1.29,1.37,4.25,6.96,,,,,
+Sep 20 2026 - 5:45pm,Brazil,Carioca B2,Friburguense,Campos AA,2.33,1.67,2.84,67,67,67,7.5,-0.67,1.65,1.54,1.57,3.75,4.5,,,,,
+Sep 20 2026 - 6:00pm,Argentina,Prim B Metro,Villa San Carlos,Talleres Remedios,1.12,2.06,1.76,32,56,21,9.06,0.0,1.45,1.1,3.75,2.95,1.95,1.57,2.75,2.27,1.59,1.19
+Sep 20 2026 - 6:00pm,Argentina,Prim B Metro,Liniers,Argentino Merlo,1.12,1.12,1.77,32,50,21,7.82,0.0,1.15,1.01,2.18,2.9,3.8,1.57,2.75,2.28,1.33,1.57
+Sep 20 2026 - 6:00pm,Argentina,Prim B Metro,Dock Sud,Argentino Quilmes,1.47,1.06,2.09,44,59,29,9.53,0.0,1.41,1.08,2.25,3.05,2.88,1.47,2.46,2.07,1.27,1.49
+Sep 20 2026 - 6:00pm,Argentina,Primera C,Leandro Nicéforo Alem,Mercedes,1.29,0.93,2.11,33,61,29,8.57,0.0,1.18,1.01,3.55,2.9,2.05,1.55,2.62,2.18,1.62,1.23
+Sep 20 2026 - 6:00pm,Argentina,Primera C,General Lamadrid,Leones de Rosario,1.86,1.5,1.43,25,40,11,7.79,0.0,1.44,1.15,,,,1.58,2.86,1.95,1.36,1.33
+Sep 20 2026 - 6:00pm,Argentina,Primera C,Lugano,Estrella del Sur,1.57,1.14,2.04,40,65,40,7.22,0.0,1.27,1.14,1.95,2.9,3.8,1.56,2.66,2.27,1.16,1.64
+Sep 20 2026 - 6:00pm,Argentina,Primera C,Puerto Nuevo,Deportivo Paraguayo,1.0,0.86,2.04,36,54,33,5.78,0.0,1.05,0.98,1.83,3.0,3.85,1.54,2.66,2.36,1.12,1.8
+Sep 20 2026 - 6:00pm,Argentina,Prim B Nacional,Chacarita Juniors,Quilmes,1.5,0.5,1.89,29,43,33,8.57,4.29,1.04,1.39,2.45,2.7,2.9,1.61,2.87,2.2,1.36,1.39
+Sep 20 2026 - 6:00pm,Argentina,Prim B Nacional,Agropecuario,Gimnasia y Tiro,1.79,1.29,2.04,43,71,40,7.57,4.93,1.44,1.18,2.05,2.9,3.4,1.5,2.7,2.15,1.33,1.59
+Sep 20 2026 - 6:00pm,Argentina,Prim B Nacional,Deportivo Morón,Godoy Cruz,2.57,1.07,2.18,40,65,32,8.78,5.72,1.64,1.25,2.0,2.9,3.7,1.54,2.87,2.23,1.22,1.63
+Sep 20 2026 - 6:00pm,USA,NWSL,Boston Legacy W,Houston Dash,1.08,0.67,2.94,60,72,60,7.31,3.09,1.53,1.2,1.54,3.96,5.02,,1.62,,,
+Sep 20 2026 - 6:00pm,Greece,Super League,Panaitolikos,PAOK,3.0,1.5,3.25,75,100,75,6.5,3.5,1.17,1.17,5.0,4.0,1.58,1.23,1.85,1.83,1.18,1.14
+Sep 20 2026 - 6:00pm,Spain,Primera Division RFEF Group 1,Extremadura 1924,Cultural y Deportiva Leonesa,1.0,1.33,1.17,17,17,17,8.34,3.34,0.97,1.26,2.26,3.15,3.2,1.38,2.17,1.85,1.36,1.55
+Sep 20 2026 - 6:00pm,Mexico,Liga MX Femenil,Pumas UNAM Women,Puebla Women,1.29,0.43,5.36,79,100,93,7.0,2.0,1.97,1.17,,,,1.04,1.13,1.87,1.03,7.8
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Juventud Unida Univ.,San Martín Mendoza,1.27,0.73,1.32,27,36,18,8.27,0.0,1.32,1.01,1.95,2.95,4.0,1.52,2.52,2.2,1.16,1.68
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Costa Brava,Sol de Mayo,1.55,0.64,2.0,41,64,36,10.55,0.43,1.45,0.91,,,,1.35,2.13,2.47,1.0,2.88
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Deportivo Rincón,Deportivo Santamarina,1.75,0.33,1.71,25,42,25,6.98,0.58,1.29,0.94,1.36,4.0,8.0,1.52,2.59,3.14,1.03,2.75
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Alvarado,Olimpo,2.45,1.55,1.77,27,59,14,9.73,0.43,1.83,1.02,1.98,2.95,4.0,1.62,2.83,2.5,1.36,1.75
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Sarmiento de La Banda,Defensores Belgrano VR,1.91,0.92,2.17,35,66,35,9.81,0.1,1.31,1.26,1.88,3.05,4.1,,2.5,,,
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Huracán Las Heras,Atenas,1.73,1.27,1.64,27,36,23,9.39,0.2,1.77,1.07,3.0,2.85,2.5,1.57,2.7,2.2,1.32,1.28
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Douglas Haig,Gimnasia Chivilcoy,2.0,1.0,2.17,46,54,46,10.58,1.42,2.04,1.11,1.91,3.1,3.7,1.52,2.62,2.22,1.28,1.65
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Bartolomé Mitre,San Martín Formosa,1.73,1.27,2.0,32,64,27,9.18,0.72,1.58,1.28,,,,1.5,2.41,2.1,1.28,1.29
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Villa Mitre,Kimberley Mar del Plata,1.91,1.45,1.5,23,41,32,10.36,1.07,1.55,1.12,1.82,2.95,4.4,1.55,2.62,2.24,1.33,1.73
+Sep 20 2026 - 6:00pm,Argentina,Torneo Federal A,Sol de América,9 de Julio Rafaela,2.55,0.83,2.43,43,74,57,7.47,0.0,1.38,1.15,2.0,3.0,3.6,,2.5,,,
+Sep 20 2026 - 6:00pm,Spain,Tercera Group 4,Derio,Santurtzi,1.0,1.5,1.75,50,75,25,8.0,-0.5,1.58,1.31,1.79,3.4,3.35,1.28,2.03,1.82,1.15,1.8
+Sep 20 2026 - 6:00pm,Spain,Tercera Group 10,Conil,Cádiz II,1.5,1.0,1.75,25,50,25,9.0,-1.5,0.99,1.04,2.37,2.87,2.45,1.37,2.32,1.88,1.36,1.53
+Sep 20 2026 - 6:00pm,Brazil,Alagoano U20,CSE U20,Desportiva Aliança U20,2.25,1.5,2.07,44,76,25,0.0,-2.0,0.0,0.0,1.63,3.7,4.6,,1.72,,,
+Sep 20 2026 - 6:00pm,Brazil,Paulista U20,Botafogo SP U20,Osasco Audax U20,1.36,1.57,2.65,54,79,47,9.64,-0.07,1.54,1.31,1.93,3.45,3.45,1.19,1.73,1.6,1.21,1.7
+Sep 20 2026 - 6:15pm,Poland,Ekstraklasa,Lech Poznań,Radomiak Radom,2.5,0.33,2.38,29,59,59,10.0,4.17,2.11,1.15,1.32,5.4,6.5,1.06,1.4,1.62,1.07,3.05
+Sep 20 2026 - 6:30pm,Brazil,Goiano 2,Bom Jesus,Goiânia,1.5,1.0,1.34,34,50,25,7.6,0.0,1.71,1.32,2.07,3.25,3.6,1.39,2.27,1.99,1.26,1.67
+Sep 20 2026 - 6:30pm,Spain,Primera Division RFEF Group 2,Real Zaragoza,FC Cartagena,2.0,1.67,2.67,50,67,33,14.0,4.66,2.21,1.49,1.6,3.6,4.35,1.33,2.15,2.1,1.12,2.2
+Sep 20 2026 - 6:30pm,Spain,Primera Division RFEF Group 2,Hércules CF,Juventud Torremolinos,1.0,0.33,3.5,67,100,67,12.34,6.0,1.71,1.1,1.65,3.65,4.67,1.31,1.95,1.92,1.1,2.02
+Sep 20 2026 - 6:30pm,Italy,Serie C Group A,Folgore Caratese,Giana Erminio,0.4,0.2,2.5,60,60,60,11.0,6.4,1.65,1.84,2.23,3.0,3.3,1.36,2.3,1.85,1.33,1.57
+Sep 20 2026 - 6:30pm,Italy,Serie C Group A,Alcione,Union Brescia,1.8,2.2,2.5,60,60,50,8.0,3.8,1.44,1.75,3.9,3.2,1.91,1.33,2.12,1.85,1.25,1.17
+Sep 20 2026 - 6:30pm,Italy,Serie C Group A,Lecco,Pergolettese,1.4,1.0,1.1,10,20,10,5.4,4.2,1.63,1.08,2.0,3.2,3.11,1.36,2.2,1.87,1.25,1.6
+Sep 20 2026 - 6:30pm,Italy,Serie C Group B,Grosseto,Perugia,1.8,1.4,2.5,50,80,60,10.0,4.2,1.94,1.28,2.75,3.15,2.37,1.29,1.86,1.65,1.31,1.28
+Sep 20 2026 - 6:30pm,Italy,Serie C Group B,Gubbio,Ostia Mare Lidocalcio,1.4,0.6,3.1,70,80,70,8.8,4.4,1.14,1.36,2.2,3.1,2.87,1.31,2.13,1.79,1.26,1.46
+Sep 20 2026 - 6:30pm,Brazil,Alagoano U20,ASA U20,Inter Arábia U20,2.13,1.75,2.38,44,57,38,0.0,-2.0,0.0,0.0,1.89,3.42,3.5,,1.9,,,
+Sep 20 2026 - 6:30pm,Ecuador,Primera Categoría Serie A,Técnico Universitario,Delfin SC,1.07,0.93,2.0,37,50,35,8.4,6.3,1.32,1.16,1.92,3.25,4.0,1.44,2.43,2.09,1.28,1.71
+Sep 20 2026 - 6:45pm,Italy,Serie A,AC Milan,Lecce,3.0,1.5,1.75,0,75,0,6.0,4.0,1.69,1.23,1.24,5.75,10.0,1.15,1.66,2.07,1.04,3.6
+Sep 20 2026 - 6:45pm,France,Ligue 1,Olympique Marseille,PSG,1.5,1.67,3.75,59,84,84,9.67,2.17,1.81,2.08,6.5,5.25,1.4,1.06,1.35,1.55,1.17,1.11
+Sep 20 2026 - 7:00pm,Brazil,Serie A,Vitória,Cruzeiro,2.15,1.31,2.46,42,74,46,9.31,5.23,1.46,1.45,2.9,3.3,2.37,1.26,2.03,1.72,1.33,1.36
+Sep 20 2026 - 7:00pm,Brazil,Serie A,Corinthians,Fluminense,1.29,0.92,2.43,57,75,37,9.92,4.88,1.44,1.38,2.2,3.1,3.5,1.46,2.29,2.0,1.3,1.62
+Sep 20 2026 - 7:00pm,Argentina,Prim B Nacional,Deportivo Madryn,Racing Córdoba,2.0,0.5,2.32,50,83,47,8.36,5.35,1.36,1.28,1.57,3.45,5.6,1.47,2.38,2.25,1.3,2.1
+Sep 20 2026 - 7:00pm,Brazil,Serie B,Goiás,Avaí,1.69,0.79,2.29,40,63,41,8.02,5.69,1.43,1.07,,,,1.51,2.37,2.1,1.17,1.82
+Sep 20 2026 - 7:00pm,Colombia,Categoria Primera A,Fortaleza CEIF,Junior,1.07,1.47,2.63,62,82,50,8.99,5.34,1.23,1.43,2.8,3.0,2.5,,2.05,,,
+Sep 20 2026 - 7:00pm,Spain,La Liga,Valencia CF,Real Sociedad,0.33,1.0,2.84,34,50,50,9.66,4.67,0.97,1.22,2.7,3.3,2.6,1.3,1.86,1.69,1.35,1.38
+Sep 20 2026 - 7:00pm,Spain,Segunda División,Leganés,Granada CF,3.0,1.33,1.67,17,34,34,3.33,3.33,1.34,1.45,2.0,3.26,3.92,1.4,2.28,2.05,1.34,1.78
+Sep 20 2026 - 7:00pm,Brazil,Paraibano 2,Spartax,Auto Esporte,2.0,3.0,2.0,50,75,25,4.0,-0.5,1.04,1.11,4.44,3.8,1.66,,1.7,,,
+Sep 20 2026 - 7:00pm,Brazil,Serie C,Santa Cruz,Floresta,1.6,1.5,1.7,35,45,30,8.8,4.6,1.37,1.04,1.65,3.05,5.5,1.6,2.75,2.63,1.36,2.0
+Sep 20 2026 - 7:30pm,Argentina,Prim B Nacional,Deportivo Maipú,Gimnasia Jujuy,1.93,1.14,2.36,47,65,47,10.14,4.58,1.65,1.19,1.98,3.25,3.7,1.35,2.15,1.91,1.29,1.75
+Sep 20 2026 - 7:30pm,Argentina,Prim B Nacional,Colón,Los Andes,2.0,1.21,1.79,29,54,32,9.36,4.71,1.5,1.34,1.75,3.0,5.2,1.6,2.83,2.54,1.36,1.91
+Sep 20 2026 - 7:30pm,Portugal,Liga NOS,Porto,Benfica,3.0,3.0,3.5,17,100,67,14.33,2.34,2.09,2.09,2.75,3.36,2.6,1.22,1.79,1.63,1.47,1.4
+Sep 20 2026 - 7:30pm,Uruguay,Primera División,Nacional,Defensor Sporting,1.54,1.14,2.3,56,70,45,11.33,5.18,1.45,1.49,1.6,3.58,4.5,,2.0,,,
+Sep 20 2026 - 8:00pm,Argentina,Primera División,Rosario Central,Argentinos Juniors,1.75,1.93,2.11,54,68,41,10.82,5.0,1.6,1.69,2.3,3.1,3.25,,2.6,,,
+Sep 20 2026 - 8:00pm,Argentina,Primera División,Platense,Newell's Old Boys,1.0,1.12,2.16,50,68,34,7.96,4.36,1.46,1.23,2.15,3.1,3.5,1.5,2.43,2.15,1.4,1.7
+Sep 20 2026 - 8:00pm,Argentina,Prim B Metro,Deportivo Merlo,Flandria,1.35,0.59,2.38,47,68,47,9.65,0.0,1.42,1.02,3.05,2.8,2.6,1.7,3.14,2.45,1.41,1.33
+Sep 20 2026 - 8:00pm,Argentina,Prim B Nacional,San Martín San Juan,Colegiales,1.86,0.43,1.93,43,61,33,10.79,3.35,1.55,1.29,1.8,3.0,4.8,1.59,2.88,2.5,1.3,1.8
+Sep 20 2026 - 8:00pm,Argentina,Prim B Nacional,Central Norte,Defensores de Belgrano,1.43,0.93,1.43,33,43,22,8.43,4.72,1.38,1.24,2.2,2.75,3.5,,3.1,,,
+Sep 20 2026 - 8:00pm,Argentina,Prim B Nacional,Chaco For Ever,Almirante Brown,1.57,1.07,1.72,40,54,29,7.93,5.36,1.45,1.1,1.93,2.8,4.2,1.66,3.05,2.57,1.13,1.73
+Sep 20 2026 - 8:00pm,Argentina,Prim B Nacional,Club Atlético Güemes,Midland,1.07,0.79,2.33,57,68,43,8.57,4.86,1.02,1.36,2.53,2.87,2.62,1.57,2.7,2.14,1.4,1.4
+Sep 20 2026 - 8:00pm,Brazil,Goiano 2,Morrinhos,Rio Verde GO,1.67,2.0,2.24,44,80,45,6.43,0.0,1.04,1.65,3.52,3.0,2.0,,2.5,,,
+Sep 20 2026 - 8:00pm,Brazil,Cearense 3,Acopiara,Esporte Limoeiro,2.29,1.43,2.57,57,72,72,0.0,-2.0,0.0,0.0,2.0,3.25,3.5,,1.95,,,
+Sep 20 2026 - 8:00pm,Uruguay,Segunda División,Rentistas,Oriental,1.5,1.52,2.23,55,70,41,10.21,-0.41,1.41,1.18,1.95,3.15,3.65,1.33,2.18,1.9,1.29,1.73
+Sep 20 2026 - 9:00pm,USA,USL Championship,Indy Eleven,Oakland Roots,2.25,1.18,2.83,61,74,57,10.15,3.75,1.77,1.4,1.98,3.65,3.45,1.19,1.69,1.62,1.22,1.73
+Sep 20 2026 - 9:00pm,USA,NWSL,Chicago Red Stars,Washington Spirit,1.18,2.0,2.62,39,79,44,8.84,2.32,1.21,1.49,9.05,5.4,1.24,1.12,1.45,1.7,1.14,1.07
+Sep 20 2026 - 9:00pm,Ecuador,Primera Categoría Serie A,Deportivo Cuenca,Mushuc Runa SC,1.2,1.27,2.25,50,64,40,9.83,5.0,1.37,1.4,2.3,3.0,2.85,1.46,2.61,1.95,1.33,1.5
+Sep 20 2026 - 9:05pm,Colombia,Categoria Primera A,Atlético Bucaramanga,La Equidad,1.37,1.26,2.69,62,80,55,8.77,5.55,1.34,1.39,1.65,3.6,4.6,1.3,2.01,1.95,1.25,2.1
+Sep 20 2026 - 9:15pm,Colombia,Liga Femenina,Deportivo Cali W,Atlético Nacional W,2.26,2.09,2.57,44,68,52,9.72,3.22,1.75,1.72,1.9,3.1,3.95,,2.3,,,
+Sep 20 2026 - 9:30pm,Brazil,Serie A,Flamengo,Bragantino,2.31,1.23,2.42,46,93,43,11.85,5.54,2.0,1.56,1.39,5.0,7.5,1.17,1.6,1.84,1.18,2.9
+Sep 20 2026 - 9:30pm,Brazil,Serie B,Londrina,Fortaleza,1.21,1.21,2.11,36,54,39,11.57,5.93,1.59,1.25,2.75,3.1,2.44,1.39,2.22,1.93,1.33,1.4
+Sep 20 2026 - 9:30pm,Brazil,Serie C,Ferroviária,Brusque,2.09,1.0,2.17,40,58,34,12.85,5.09,1.88,1.32,1.95,3.0,3.7,1.4,2.25,2.0,1.35,1.69
+Sep 20 2026 - 9:30pm,Brazil,Serie C,Paysandu,Inter de Limeira,1.55,1.64,2.87,73,78,64,12.81,5.19,2.31,1.32,1.9,3.2,3.75,1.3,1.96,1.82,1.22,1.75
+Sep 20 2026 - 9:45pm,Mexico,Liga MX Femenil,América Women,Atlas Women,3.0,1.14,4.43,57,93,72,13.43,1.28,2.91,1.02,1.01,13.5,29.0,,,,,
+Sep 20 2026 - 10:00pm,Mexico,Liga Premier Serie A,Delfines Coatzacoalcos,Real Refineros,0.0,3.0,2.0,50,50,50,7.0,0.0,0.0,0.0,2.38,3.5,2.55,,1.75,,,
+Sep 20 2026 - 10:15pm,Argentina,Primera División,Belgrano,Estudiantes Río Cuarto,1.69,0.44,1.83,33,60,30,8.38,4.78,1.47,1.23,1.44,4.06,8.55,1.36,2.3,2.49,1.05,2.75
+Sep 20 2026 - 10:30pm,Brazil,Serie A,Atlético PR,Bahia,2.15,1.69,2.77,58,77,46,11.08,4.15,1.59,1.52,2.15,3.4,3.25,1.24,1.87,1.73,1.32,1.71
+Sep 20 2026 - 11:00pm,USA,MLS,Inter Miami,San Diego,1.5,0.82,3.65,69,78,60,11.12,5.22,1.99,1.22,1.44,5.5,5.25,1.04,1.17,1.25,1.08,2.7
+Sep 20 2026 - 11:00pm,USA,USL Championship,Sacramento Republic,San Antonio,2.09,1.42,2.61,52,74,44,9.7,5.27,1.57,1.18,1.84,3.3,3.75,1.36,2.23,1.95,1.17,1.76
+Sep 20 2026 - 11:00pm,USA,USL League One,Spokane Velocity,Athletic Club Boise,2.31,1.5,3.25,65,76,72,11.21,3.85,1.48,1.47,2.3,3.2,2.62,1.22,1.77,1.5,1.4,1.44
+Sep 20 2026 - 11:00pm,USA,NWSL,Bay,Racing Louisville,1.0,0.5,3.01,60,74,64,10.14,3.68,1.46,1.55,1.81,3.72,3.48,1.14,1.55,1.36,1.22,1.73
+Sep 20 2026 - 11:00pm,USA,NWSL,Utah Royals,Angel City,1.91,1.64,2.87,60,82,55,12.73,2.63,1.64,1.63,2.22,3.38,2.76,1.14,1.6,1.4,1.36,1.62
+Sep 20 2026 - 11:00pm,Mexico,Ascenso MX,Tapatío,Tlaxcala,1.38,1.0,3.63,82,88,69,6.75,5.75,1.38,1.28,1.88,3.61,3.17,1.16,1.62,1.55,1.25,1.78
+Sep 20 2026 - 11:00pm,Mexico,Liga MX Femenil,Atlético San Luis W,Pachuca Women,1.71,1.0,3.64,72,86,65,11.28,3.0,2.14,1.43,5.7,4.55,1.4,,,,,
+Sep 20 2026 - 11:00pm,Uruguay,Primera División,Liverpool FC Montevideo,Racing,1.5,1.86,2.17,45,61,36,10.72,5.65,1.51,1.62,2.25,3.0,3.2,1.42,2.32,2.0,1.28,1.55
+Sep 20 2026 - 11:10pm,Colombia,Categoria Primera A,Deportes Tolima,América de Cali,1.66,1.8,2.34,42,68,42,8.99,6.28,1.46,1.51,2.25,3.0,2.9,1.37,2.29,1.93,1.33,1.57
+Sep 20 2026 - 11:30pm,Colombia,Liga Femenina,Millonarios W,Santa Fe W,2.09,1.65,2.52,41,70,53,8.83,2.35,1.63,1.69,1.67,3.45,5.2,1.36,2.18,2.0,1.25,2.2
+Sep 20 2026 - 11:30pm,Ecuador,Primera Categoría Serie A,LDU Quito,CD Universidad Católica,1.53,1.7,2.22,45,67,37,10.53,4.4,1.53,1.58,2.05,3.3,3.0,1.24,1.88,1.66,1.25,1.62
+Sep 21 2026 - 12:00am,Mexico,Liga MX,Pachuca,Tijuana,1.38,1.86,2.6,47,73,47,8.79,4.52,1.55,1.36,1.77,3.74,4.2,1.22,1.77,1.65,1.17,2.0
+Sep 21 2026 - 12:00am,Mexico,Liga MX,Toluca,Santos Laguna,2.38,0.5,2.69,44,63,57,13.38,3.25,1.81,1.4,1.29,6.2,8.8,1.06,1.31,1.65,1.05,3.5
+Sep 21 2026 - 12:30am,Argentina,Primera División,Vélez Sarsfield,Tigre,1.73,1.28,1.88,51,57,26,8.35,4.35,1.38,1.47,2.25,2.94,3.08,1.61,2.81,2.24,1.27,1.62
+Sep 21 2026 - 1:15am,Colombia,Categoria Primera A,Llaneros,Atlético Nacional,1.18,2.28,2.53,49,75,48,10.43,5.7,1.16,1.77,4.2,3.4,1.7,1.27,1.94,1.83,1.93,1.17
+Sep 21 2026 - 2:10am,Mexico,Liga MX,Querétaro,León,1.86,1.63,2.47,54,66,48,8.5,6.38,1.37,1.6,2.37,3.4,2.6,1.22,1.67,1.53,1.27,1.5
